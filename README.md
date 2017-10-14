@@ -24,7 +24,7 @@ Processeurs / RAM conseillés:
 
 Webcam vivement conseillées et longuement testées :
 - Logitech C920 :+1: (30 images par seconde, mais demande une bonne lumière)
-- Logitech C922 **** (demande une bonne lumière)
+- Logitech C922 :+1: (demande une bonne lumière)
 - Microsoft Lifecam C3000 : demande quelquefois de relancer une fois miniDart, (demande une bonne lumière)
 
 Système d'exploitation : testé sur Windows 7 et Win 10  64 bits.
