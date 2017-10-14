@@ -4,14 +4,14 @@ Logiciel d'analyse vidéo pour coachs de sports collectifs (handball, mais pas s
 
 Ceci est une première version de démonstration du logiciel **miniDart**. Elle n'est pas complète, et comporte probablement quelques bugs. Une partie des fonctionnalités est encore manquante, et devrait être implémentée d'ici la fin de l'année 2017.
 
-**IMPORTANT**
+**IMPORTANT : Cadre de ce projet**
 
-Cadre du projet
-**Un projet de développement handball est en cours, et miniDart sera une des ressources pour son financement. Le but est de financer un tournoi international de handball pour une équipe féminine jeunes (-13). 
+**Un projet de développement handball, est en cours. Le logiciel miniDart sera une des ressources pour son financement. Le but est de financer un tournoi international de handball pour une équipe féminine jeunes (-13)**
 
-Ainsi, le logiciel miniDart, lorsqu'il sera complet, sera dans un premier temps vendu.  Quand suffisamment d'argent aura été récupéré, les sources du logiciel seront mises sous licence GPL.**
+**Ainsi, le logiciel miniDart, lorsqu'il sera complet, sera dans un premier temps vendu. Quand suffisamment d'argent aura été récupéré, les sources du logiciel seront mises sous licence GPL.**
 
-La version en téléchargement a bseoin de Windows 7 ou plus + pour fonctionner, et vous est fournié avec un installeur. La désinstallation a aussi été testée, et supprime toute trace du logiciel. **Si vous l'installez, notez que vous utilisez ce logiciel à vos risques et périls, et n'oubliez pas qu'il est impératif de faire des sauvegardes de vos document AVANT de l'utiliser**.
+La version en téléchargement a besoin de Windows 7 ou plus + pour fonctionner, et vous est fournie avec un installeur. La désinstallation a aussi été testée, et supprime toute trace du logiciel. **Si vous l'installez, notez que vous utilisez ce logiciel à vos risques et périls, et n'oubliez pas qu'il est impératif de faire des sauvegardes de vos document AVANT de l'utiliser.
+
 
 Pré-requis
 
