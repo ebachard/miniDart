@@ -32,11 +32,20 @@ Système d'exploitation : testé sur Windows 7 et Win 10  64 bits.
 Ce qui est actuellement fonctionnel : 
 
 - démarrage de l'application en plein écran (ALT + F  pour repasser en mode fenêtre)
-- affichage retardé (jusqu'à 40s, mais pourra être augmenté. Testé OK jusqu'à 100s de retard, mais il faut beaucoup de RAM dans ce cas)
+- affichage retardé (réglable jusqu'à 40s, mais pourra être augmenté. Testé OK jusqu'à 100s de retard, mais il faut beaucoup de RAM dans ce cas)
+- permet le séquençage vidéo (le son n'est pas géré pour l'instant)
 - enregistrement avec ou sans retard des images issues d'une ou plusieurs webcams (une seule peut être enregistrée à la fois)
+- chronomètre : on peut ajouter le chronomètre, et incruster le temps dans les vidéos enregistrées
+- affichage du temps d'activité (cumul si chronomètre activé) et/ou le temps total (depuis le premier appui sur start)
 - changement de webcam en live (il est toutefois conseillé de démarrer miniDart AVEC la webcam branchée)
 - thème modifiable (onglet préférences)
+- toute l'interface utilisateur est modifiable en cours de fonctionnement, mais n'est pas mémorisée pour le prochain démarrage)
 - le mode statistiques est en cours d'implémentation, et toute suggestion d'amélioration est la bienvenue
+- ouvrir un fichier de type vidéo (sera utilisé pour le mode image par image et l'analyse+séquençage) avec ajout de tags)
+
+
+À venir :
+- mode image par image
 
 Informations techniques:
 
