@@ -45,7 +45,10 @@ Ce qui est actuellement fonctionnel :
 
 
 À venir :
-- mode image par image
+- mode image par image (déjà disponible ici : https://github.com/ebachard/cv_slideshow fonctionne en mode "drag and drop") ;
+- mode ralenti (slow-motion) ;
+- annotations : sur une image donnée, pouvant être enregistrée sur une durée donnée, ou annotation de durée donnée ;
+- (futur) enregistrement d'une séquence donnée, avec tags + base de données pour retrouver toutes les vidéos sur un critère de recherche donné.
 
 Informations techniques:
 
