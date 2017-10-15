@@ -64,7 +64,7 @@ Ce logiciel est réalisé sous Linux, et cross-compilé pour fonctionner sous Wi
 * FFMPEG (http://ffmpeg.org/) ouverture, analyse, export de fichiers vidéos (divx, avi etc) ;
 * InnoSetup (http://www.jrsoftware.org/) pour le packaging Windows ;
 * wine64 (https://www.winehq.org/)
-* Native File Dialog (https://github.com/mlabbe/nativefiledialog) by Michael Labbe
+* Native File Dialog (https://github.com/mlabbe/nativefiledialog), ouverture d'un fichier, sauvegarde, écrit par Michael Labbe
 
 **Auteur du logiciel miniDart : Eric Bachard © 2016-2017**
 
