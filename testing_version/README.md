@@ -1,3 +1,13 @@
+Ce répertoire contient une archive de démonstration. La version actuellement en téléchargement est la version 0.5.5
+
+Pour l'installer sous Windows, 
+
+* placer cette archive (par exemple) sur le bureau ;
+* double-cliquer dessus pour lancer l'installeur ;
+* suivre les instructions.
+
+En particulier, il est recommandé d'ajouter un raccourci sur le bureau pour l'utiliser plus facilement.
+
 N'oubliez pas de tester l'intégrité de l'archive téléchargée 
 
 *******************************************************************************************************
