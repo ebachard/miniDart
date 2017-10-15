@@ -41,7 +41,7 @@ Ce qui est actuellement fonctionnel :
 - thème modifiable (onglet préférences)
 - toute l'interface utilisateur est modifiable en cours de fonctionnement, mais n'est pas mémorisée pour le prochain démarrage)
 - le mode statistiques est en cours d'implémentation, et toute suggestion d'amélioration est la bienvenue
-- ouvrir un fichier de type vidéo (sera utilisé pour le mode image par image et l'analyse+séquençage) avec ajout de tags)
+- ouvrir un fichier de type vidéo (sera utilisé pour le mode image par image et l'analyse+séquençage avec ajout de tags)
 
 
 À venir :
@@ -56,7 +56,7 @@ Informations techniques:
 Ce logiciel est réalisé sous Linux, et cross-compilé pour fonctionner sous Windows 64 bits. Les APIs utilisées sont:
 * SDL2 ( http://libsdl.org/) pour le fenêtrage et la portabilité ;
 * OpenGL (https://www.khronos.org/opengl/) pour le rendu ;
-* ImGui (https://github.com/ocornut/imgui)pour l'interface utilisateur et les performances graphiques (merci à Omar Cornut pour cette UI géniale) ;
+* ImGui (https://github.com/ocornut/imgui) pour l'interface utilisateur et les performances graphiques (merci à Omar Cornut pour cette UI géniale) ;
 * OpenCV 3.1.0 (https://opencv.org/) : gestion des webcams, traitement des frames, annotations (chronomètre, enregistrement) ;
 * DirectShow et DirectX ( sous Windows) , v4l2 (sous Linux) : acquisition vidéo ;
 * InnoSetup (http://www.jrsoftware.org/) pour le packaging Windows ;
