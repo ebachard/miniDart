@@ -10,7 +10,7 @@ Ceci est une première version de démonstration du logiciel **miniDart**. Elle 
 
 **Ainsi, le logiciel miniDart, lorsqu'il sera complet, sera dans un premier temps vendu. Quand suffisamment d'argent aura été récupéré, les sources du logiciel seront mises sous licence GPL.**
 
-La version en téléchargement a besoin de Windows 7 ou plus + pour fonctionner, et vous est fournie avec un installeur. La désinstallation a aussi été testée, et supprime toute trace du logiciel. **Si vous l'installez, notez que vous utilisez ce logiciel à vos risques et périls, et n'oubliez pas qu'il est impératif de faire des sauvegardes de vos document AVANT de l'utiliser.
+La version en téléchargement a besoin de Windows 7 ou plus + pour fonctionner, et vous est fournie avec un installeur. La désinstallation a aussi été testée, et supprime toute trace du logiciel. **Si vous l'installez**, notez que vous utilisez ce logiciel à vos risques et périls, et n'oubliez pas qu'il est impératif de faire des sauvegardes de vos document AVANT de l'utiliser.
 
 
 **Pour le téléchargement, cliquer ici : https://github.com/ebachard/miniDart/tree/master/testing_version**
@@ -66,8 +66,8 @@ Ce logiciel est réalisé sous Linux, et cross-compilé pour fonctionner sous Wi
 * DirectShow et DirectX ( sous Windows) , v4l2 + gstreamer (sous Linux) : acquisition vidéo ;
 * FFMPEG (http://ffmpeg.org/) ouverture, analyse, export de fichiers vidéos (divx, avi etc) ;
 * InnoSetup (http://www.jrsoftware.org/) pour le packaging Windows ;
-* wine64 (https://www.winehq.org/)
-* Native File Dialog (https://github.com/mlabbe/nativefiledialog), ouverture d'un fichier, sauvegarde, écrit par Michael Labbe
+* wine64 (https://www.winehq.org/) ;
+* Native File Dialog (https://github.com/mlabbe/nativefiledialog), ouverture d'un fichier, sauvegarde, écrit par Michael Labbe.
 
 **Auteur du logiciel miniDart : Eric Bachard © 2016-2017**
 
