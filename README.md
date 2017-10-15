@@ -58,7 +58,8 @@ Ce logiciel est réalisé sous Linux, et cross-compilé pour fonctionner sous Wi
 * OpenGL (https://www.khronos.org/opengl/) pour le rendu ;
 * ImGui (https://github.com/ocornut/imgui) pour l'interface utilisateur et les performances graphiques (merci à Omar Cornut pour cette UI géniale) ;
 * OpenCV 3.1.0 (https://opencv.org/) : gestion des webcams, traitement des frames, annotations (chronomètre, enregistrement) ;
-* DirectShow et DirectX ( sous Windows) , v4l2 (sous Linux) : acquisition vidéo ;
+* DirectShow et DirectX ( sous Windows) , v4l2 + gstreamer (sous Linux) : acquisition vidéo ;
+* FFMPEG (http://ffmpeg.org/) ouverture et analyse de fichiers vidéos ;
 * InnoSetup (http://www.jrsoftware.org/) pour le packaging Windows ;
 * wine64 (https://www.winehq.org/)
 
