@@ -24,6 +24,9 @@ Processeurs / RAM conseillés:
 * i5 + 4 Go minimum
 * i7 + 8 Go confortable :+1: 
 
+L'installation demande ~ 35 Mo de place sur le disque + de la place pour les fichiers vidéos créés.
+
+
 Webcam vivement conseillées et longuement testées :
 - Logitech C920 :+1: (30 images par seconde, mais demande une bonne lumière)
 - Logitech C922 :+1: (demande une bonne lumière)
