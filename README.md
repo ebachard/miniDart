@@ -59,7 +59,7 @@ Ce qui est actuellement fonctionnel :
 Informations techniques:
 
 Ce logiciel est réalisé sous Linux, et cross-compilé pour fonctionner sous Windows 64 bits. Les APIs utilisées sont:
-* SDL2 ( http://libsdl.org/) pour le fenêtrage et la portabilité ;
+* SDL2 ( http://libsdl.org/) pour le fenêtrage et la remarquable portabilité Linux -> Windows ;
 * OpenGL (https://www.khronos.org/opengl/) pour le rendu ;
 * ImGui (https://github.com/ocornut/imgui) pour l'interface utilisateur et les performances graphiques (merci à Omar Cornut pour cette UI géniale) ;
 * OpenCV 3.1.0 (https://opencv.org/) : gestion des webcams, traitement des frames, annotations (chronomètre, enregistrement) ;
