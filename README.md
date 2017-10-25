@@ -66,7 +66,7 @@ Ce logiciel est écrit sous Linux, et cross-compilé pour fonctionner sous Windo
 * DirectShow et DirectX ( sous Windows) , v4l2 + gstreamer (sous Linux) : acquisition vidéo ;
 * FFMPEG (http://ffmpeg.org/) ouverture, analyse, export de fichiers vidéos (divx, avi etc) ;
 * InnoSetup (http://www.jrsoftware.org/) pour le packaging Windows ;
-* wine64 (https://www.winehq.org/) ;
+* wine64 (https://www.winehq.org/) pour les tests sous Linux;
 * Native File Dialog (https://github.com/mlabbe/nativefiledialog), ouverture d'un fichier, sauvegarde, écrit par Michael Labbe.
 
 **Auteur du logiciel miniDart : Eric Bachard © 2016-2017**
