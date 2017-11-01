@@ -36,7 +36,6 @@ Système d'exploitation : testé sur Windows 7 et Win 10  64 bits.
 
 Ce qui est actuellement fonctionnel : 
 
-- démarrage de l'application en plein écran (ALT + F  pour repasser en mode fenêtre)
 - affichage retardé (réglable jusqu'à 40s, mais pourra être augmenté. Testé OK jusqu'à 100s de retard, mais il faut beaucoup de RAM dans ce cas)
 - permet le séquençage vidéo (le son n'est pas géré pour l'instant)
 - enregistrement avec ou sans retard des images issues d'une ou plusieurs webcams (une seule peut être enregistrée à la fois)
