@@ -47,10 +47,9 @@ Ce qui est actuellement fonctionnel :
 - toute l'interface utilisateur est modifiable en cours de fonctionnement, mais n'est pas mémorisée pour le prochain démarrage)
 - le mode statistiques est en cours d'implémentation, et toute suggestion d'amélioration est la bienvenue
 - ouvrir un fichier de type vidéo (sera utilisé pour le mode image par image et l'analyse+séquençage avec ajout de tags)
-
+- mode image par image (déjà disponible ici : https://github.com/ebachard/cv_slideshow fonctionne en mode "drag and drop") ;
 
 À venir :
-- mode image par image (déjà disponible ici : https://github.com/ebachard/cv_slideshow fonctionne en mode "drag and drop") ;
 - mode ralenti (slow-motion) ;
 - mode suivi statistique type feuille de match (GB ou joueurs d'une équipe) ;
 - annotations : sur une image donnée, pouvant être enregistrée sur une durée donnée, ou annotation de durée donnée ;
