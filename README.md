@@ -66,6 +66,7 @@ Ce logiciel est écrit sous Linux, et cross-compilé pour fonctionner sous Windo
 * InnoSetup (http://www.jrsoftware.org/) pour le packaging Windows ;
 * wine64 (https://www.winehq.org/) pour les tests sous Linux;
 * Native File Dialog (https://github.com/mlabbe/nativefiledialog), ouverture d'un fichier, sauvegarde, écrit par Michael Labbe.
+* (prochainement) TinyXML2 (https://github.com/leethomason/tinyxml2) pour les tags xml lors de l'analyse et le classement d'une vidéo.
 
 **Auteur du logiciel miniDart : Eric Bachard © 2016-2017**
 
