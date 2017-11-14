@@ -51,10 +51,6 @@ Ce qui est actuellement fonctionnel :
 À venir :
 - mode ralenti (slow-motion) ;
 - mode suivi statistique type feuille de match (GB ou joueurs d'une équipe) ;
-- annotations : sur une image donnée, pouvant être enregistrée sur une durée donnée, ou annotation de durée donnée ;
-- enregistrement d'une ou plusieurs images clés pendant le visionnement d'une source quelconque (vidéo ou webcam)
-- (futur) enregistrement d'une séquence donnée, avec tags + base de données pour retrouver toutes les vidéos sur un critère de recherche donné.
-- (futur) tracking d'objets. Exemple : calcul de la droite ballon-milieu du but pour vérifier l'alignement et le placement de la GB.
 
 Informations techniques:
 
