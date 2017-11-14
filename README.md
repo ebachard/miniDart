@@ -56,16 +56,16 @@ Informations techniques:
 
 Ce logiciel est écrit sous Linux, et cross-compilé pour fonctionner sous Windows 64 bits. Les APIs utilisées sont:
 * **SDL2** ( http://libsdl.org/) pour le fenêtrage et la remarquable portabilité Linux -> Windows ;
-* OpenGL (https://www.khronos.org/opengl/) pour le rendu ;
-* ImGui (https://github.com/ocornut/imgui) pour l'interface utilisateur et les performances graphiques (merci à Omar Cornut pour cette UI géniale) ;
-* OpenCV 3.1.0 (https://opencv.org/) : gestion des webcams, traitement des frames, annotations (chronomètre, enregistrement) ;
-* DirectShow et DirectX ( sous Windows) , v4l2 + gstreamer (sous Linux) : acquisition vidéo ;
-* FFMPEG (http://ffmpeg.org/) ouverture, analyse, export de fichiers vidéos (divx, avi etc) ;
-* mingw-w64 (https://mingw-w64.org/doku.php) cross-compilation de la version Windows ;
-* InnoSetup (http://www.jrsoftware.org/) pour le packaging Windows ;
-* wine64 (https://www.winehq.org/) pour les tests de la version Windows sous Linux;
-* Native File Dialog (https://github.com/mlabbe/nativefiledialog), ouverture d'un fichier, sauvegarde, écrit par Michael Labbe.
-* (prochainement) TinyXML2 (https://github.com/leethomason/tinyxml2) pour les tags xml lors de l'analyse et le classement d'une vidéo.
+* **OpenGL** (https://www.khronos.org/opengl/) pour le rendu ;
+* **Dear ImGui** (https://github.com/ocornut/imgui) pour l'interface utilisateur et les performances graphiques (merci à Omar Cornut pour cette UI géniale) ;
+* **OpenCV 3.1.0** (https://opencv.org/) : gestion des webcams, traitement des frames, annotations (chronomètre, enregistrement) ;
+* **DirectShow** et **DirectX** ( sous Windows) , v4l2 + gstreamer (sous Linux) : acquisition vidéo ;
+* **FFMPEG** (http://ffmpeg.org/) ouverture, analyse, export de fichiers vidéos (divx, avi etc) ;
+* **mingw-w64** (https://mingw-w64.org/doku.php) cross-compilation de la version Windows ;
+* **InnoSetup** (http://www.jrsoftware.org/) pour le packaging Windows ;
+* **wine64** (https://www.winehq.org/) pour les tests de la version Windows sous Linux;
+* **Native File Dialog** (https://github.com/mlabbe/nativefiledialog), ouverture d'un fichier, sauvegarde, écrit par Michael Labbe.
+* (prochainement) **TinyXML2** (https://github.com/leethomason/tinyxml2) pour les tags xml lors de l'analyse et le classement d'une vidéo.
 
 **Auteur du logiciel miniDart : Eric Bachard © 2016-2017**
 
