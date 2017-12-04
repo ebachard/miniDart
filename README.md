@@ -6,7 +6,7 @@ Ceci est une première version de démonstration du logiciel **miniDart**. Elle 
 
 **IMPORTANT : Cadre de ce projet**
 
-**Un projet de développement handball, est en cours. Le logiciel miniDart sera une des ressources pour son financement. Le but est de financer un tournoi international de handball pour une équipe féminine jeunes (-13)**
+**Un projet de développement handball, est en cours. Le logiciel miniDart sera une des ressources utilisées pour son financement. Le but est de financer un tournoi international de handball pour une équipe féminine jeunes (-13)**
 
 **Ainsi, le logiciel miniDart, lorsqu'il sera complet, sera dans un premier temps vendu. Quand suffisamment d'argent aura été récupéré, les sources du logiciel seront mises sous licence GPL.**
 
