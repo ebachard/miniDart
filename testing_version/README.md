@@ -11,6 +11,15 @@ Pour l'installer sous Windows,
 * il est recommandé d'ajouter un raccourci sur le bureau pour l'utiliser plus facilement.
 * il est recommandé de choisir un répertoire de travail dans lequel on peut enregistrer des documents ( très utile pour l'enregistrement des séquences vidéos)
 
+**Bug connu**
+
+Il faut modifier le format de l'image pour pouvoir enregistrer : 
+
+Réglage par defaut, puis changer pour 1980 x 1080 et revenir à 1280 x720 et ça devrait fonctionner avec une bonne résolution.
+
+(Le problème est causé par une mauvaise initialisation du périphérique de capture et sera corrigé dans une prochaine version)
+
+
 N'oubliez pas de tester l'intégrité de l'archive téléchargée 
 
 *******************************************************************************************************
