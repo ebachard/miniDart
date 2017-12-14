@@ -1,6 +1,5 @@
-# miniDart
+# miniDart (version actuelle : 0.6.5)
 Logiciel d'analyse vidéo pour coachs de sports collectifs (handball, mais pas seulement)
-
 
 Ceci est une première version de démonstration du logiciel **miniDart**. Elle n'est pas complète, et comporte probablement quelques bugs. Une partie des fonctionnalités est encore manquante, et devrait être implémentée d'ici la fin de l'année 2017.
 
@@ -48,9 +47,28 @@ Ce qui est actuellement fonctionnel :
 - ouvrir un fichier de type vidéo (sera utilisé pour le mode image par image et l'analyse+séquençage avec ajout de tags)
 - mode image par image (déjà disponible ici : https://github.com/ebachard/cv_slideshow fonctionne en mode "drag and drop") ;
 
+Atelier analyse :
+- ouverture d'un répertoire contenant une vidéo
+- choix du répertoire d'enregistrement par défaut des vidéos (à tester de façon plus approfondie)
+
+Atelier suivi GB :
+- couleur du tir en fonction du résultat (but, arrêt GB, poteau, tir hors cadre)
+- tracé des impacts de tirs par glisser-déposer à la souris
+- saisie nom de la GB / du GB suivi
+- saisie niveau du championnat / mode entraînement ou match / en mode match, pour la N2F, choix du club
+- saisie de la mi-temps en cours
+- mode suivi statistique type feuille de match (GB ou joueurs d'une équipe) ;
+- choix du type de tir
+- saisie numéro du tireur
+
+En cours de développement (mais déjà partiellement fonctionnel) :
+Atelier retard :
+- zoom d'une partie de l'image (réglable avec curseur). Bug connu : offset entre la région sélectionnée et celle affichée.
+Atelier GB :
+- saisie des conditions du tir
+- affichage des statistiques ( % d'arrêt, % de réussite, secteurs favorables, défavorables, suivi des tirs par joueur)
 À venir :
 - mode ralenti (slow-motion) ;
-- mode suivi statistique type feuille de match (GB ou joueurs d'une équipe) ;
 
 Informations techniques:
 
