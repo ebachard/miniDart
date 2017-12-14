@@ -6,7 +6,7 @@ Pour l'installer sous Windows,
 * double-cliquer dessus pour lancer l'installeur ;
 * suivre les instructions.
 
-En particulier
+**En particulier**
 
 * il est recommandé d'ajouter un raccourci sur le bureau pour l'utiliser plus facilement.
 * il est recommandé de choisir un répertoire de travail dans lequel on peut enregistrer des documents ( très utile pour l'enregistrement des séquences vidéos)
