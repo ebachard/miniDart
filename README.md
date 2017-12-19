@@ -1,4 +1,4 @@
-# miniDart (version actuelle : 0.6.5)
+# miniDart (version actuelle : 0.6.6)
 Logiciel d'analyse vidéo pour coachs de sports collectifs (handball, mais pas seulement)
 
 Ceci est une première version de démonstration du logiciel **miniDart**. Elle n'est pas complète, et comporte probablement quelques bugs. Une partie des fonctionnalités est encore manquante, et devrait être implémentée d'ici la fin de l'année 2017.
