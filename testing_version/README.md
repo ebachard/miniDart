@@ -1,4 +1,4 @@
-Ce répertoire contient une archive de démonstration. La version actuellement en téléchargement est la version 0.6.5
+Ce répertoire contient une archive de démonstration. La version actuellement en téléchargement est la version 0.6.6
 
 Pour l'installer sous Windows, 
 
@@ -19,11 +19,17 @@ Réglage par defaut, puis changer pour 1980 x 1080 et revenir à 1280 x720 et ç
 
 (Le problème est causé par une mauvaise initialisation du périphérique de capture et sera corrigé dans une prochaine version)
 
+La loupe ne fonctionne pas correctement, et peut crasher (ATTENTION !)
+
 
 N'oubliez pas de tester l'intégrité de l'archive téléchargée 
 
 *******************************************************************************************************
                    Somme de contrôle (sha 256)                                   Version
+
+*******************************************************************************************************
+
+     14ae47946b09a9e5edb80ac4c1230b9575a7d21d35462308bd6fed2a514d1cac     miniDart_0.6.6_test.exe
 
 *******************************************************************************************************
 
