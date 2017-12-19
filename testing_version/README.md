@@ -1,4 +1,4 @@
-La version actuellement en téléchargement est la version 0.6.6 . Ce répertoire contient des archives de démonstration.
+La version la plus récente est la version 0.6.6 . Ce répertoire contient des archives de démonstration plus anciennes, qui ne sont pas conseillées car moins fonctionnelles et comportant probablement plus de bugs.
 
 Pour l'installer sous Windows, 
 
