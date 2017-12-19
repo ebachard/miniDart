@@ -1,4 +1,4 @@
-Ce répertoire contient une archive de démonstration. La version actuellement en téléchargement est la version 0.6.6
+La version actuellement en téléchargement est la version 0.6.6 . Ce répertoire contient des archives de démonstration.
 
 Pour l'installer sous Windows, 
 
