@@ -54,6 +54,8 @@ Atelier analyse :
 Atelier suivi GB :
 - couleur du tir en fonction du résultat (but, arrêt GB, poteau, tir hors cadre)
 - tracé des impacts de tirs par glisser-déposer à la souris
+- possibilité d'ajouter une flèche, et de régler les dimensions
+- ajout du numéro du tireur (bug connu, ne fonctionne pas encore correctement)
 - saisie nom de la GB / du GB suivi
 - saisie niveau du championnat / mode entraînement ou match / en mode match, pour la N2F, choix du club
 - saisie de la mi-temps en cours
@@ -62,11 +64,18 @@ Atelier suivi GB :
 - saisie numéro du tireur
 
 En cours de développement (mais déjà partiellement fonctionnel) :
+
 Atelier retard :
+- icônes pur le chronomètre, les sources (webcam 1 ou 2)
 - zoom d'une partie de l'image (réglable avec curseur). Bug connu : offset entre la région sélectionnée et celle affichée.
+- redimensionnement de la partie visionnée
+- sélection de la partie zoomée dans la loupe
+
+
 Atelier GB :
 - saisie des conditions du tir
 - affichage des statistiques ( % d'arrêt, % de réussite, secteurs favorables, défavorables, suivi des tirs par joueur)
+
 À venir :
 - mode ralenti (slow-motion) ;
 
@@ -76,13 +85,14 @@ Ce logiciel est écrit sous Linux, et cross-compilé pour fonctionner sous Windo
 * **SDL2** ( http://libsdl.org/) pour le fenêtrage et la remarquable portabilité Linux -> Windows ;
 * **OpenGL** (https://www.khronos.org/opengl/) pour le rendu ;
 * **Dear ImGui** (https://github.com/ocornut/imgui) pour l'interface utilisateur et les performances graphiques (merci à Omar Cornut pour cette UI géniale) ;
-* **OpenCV 3.1.0** (https://opencv.org/) : gestion des webcams, traitement des frames, annotations (chronomètre, enregistrement) ;
+* **OpenCV 3.4.0** (https://opencv.org/) : gestion des webcams, traitement des frames, annotations (chronomètre, enregistrement) ;
 * **DirectShow** et **DirectX** ( sous Windows) , v4l2 + gstreamer (sous Linux) : acquisition vidéo ;
-* **FFMPEG** (http://ffmpeg.org/) ouverture, analyse, export de fichiers vidéos (divx, avi etc) ;
+* **FFMPEG (version 3.4.0 sous Windows, 3.3.4 sous Linux)** (http://ffmpeg.org/) ouverture, analyse, export de fichiers vidéos (divx, avi etc) ;
 * **mingw-w64** (https://mingw-w64.org/doku.php) cross-compilation de la version Windows ;
 * **InnoSetup** (http://www.jrsoftware.org/) pour le packaging Windows ;
 * **wine64** (https://www.winehq.org/) pour les tests de la version Windows sous Linux;
 * **Native File Dialog** (https://github.com/mlabbe/nativefiledialog), ouverture d'un fichier, sauvegarde, écrit par Michael Labbe.
+* **Font AweSome** (https://github.com/juliettef/IconFontCppHeaders ) pour les fontes-icones créées par **Juliette Foucaut**.
 * (prochainement) **TinyXML2** (https://github.com/leethomason/tinyxml2) pour les tags xml lors de l'analyse et le classement d'une vidéo.
 
 **Auteur du logiciel miniDart : Eric Bachard © 2016-2017**
