@@ -11,21 +11,22 @@ Pour l'installer sous Windows,
 * il est recommandé d'ajouter un raccourci sur le bureau pour l'utiliser plus facilement.
 * il est recommandé de choisir un répertoire de travail dans lequel on peut enregistrer des documents ( très utile pour l'enregistrement des séquences vidéos)
 
-**Bug connu**
+**Bugs connus**
 
-Il faut modifier le format de l'image pour pouvoir enregistrer : 
+ENREGISTREMENT : 1280 x 720 à 30 images par secondes est le SEUL FORMAT QUI DEVRAIT FONCTIONNER.
 
-Réglage par defaut, puis changer pour 1980 x 1080 et revenir à 1280 x720 et ça devrait fonctionner avec une bonne résolution.
+=> Je n'ai pas assez de retour pour en conseiller d'autres pour l'instant.
 
-(Le problème est causé par une mauvaise initialisation du périphérique de capture et sera corrigé dans une prochaine version)
-
-La loupe ne fonctionne pas correctement, et peut crasher (ATTENTION !)
-
+Le numéro des joueurs ne FONCTIONNE PAS (le même numéro est attribué à tous les joueurs). Cela sera corrigé dans la version 0.7 à venir.
 
 N'oubliez pas de tester l'intégrité de l'archive téléchargée 
 
 *******************************************************************************************************
                    Somme de contrôle (sha 256)                                   Version
+
+*******************************************************************************************************
+
+     964c41a9605e26f8d8719e169823621f225c3870baedcf16cbe9fca3ed96677c     miniDart_0.6.8_test.exe
 
 *******************************************************************************************************
 
