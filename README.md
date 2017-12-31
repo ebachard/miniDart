@@ -60,13 +60,12 @@ Atelier suivi GB :
 - saisie niveau du championnat / mode entraînement ou match / en mode match, pour la N2F, choix du club
 - saisie de la mi-temps en cours
 - mode suivi statistique type feuille de match (GB ou joueurs d'une équipe) ;
-- choix du type de tir
-- saisie numéro du tireur
+- choix du type de tir (pour un 7m, il faut activer le bouton "7m" AVANT de tracer le tir, sinon le tir sera pris pour un tir normal)
 
 En cours de développement (mais déjà partiellement fonctionnel) :
 
 Atelier retard :
-- icônes pur le chronomètre, les sources (webcam 1 ou 2)
+- icônes pour le chronomètre, les sources (webcam 1 ou 2)
 - zoom d'une partie de l'image (réglable avec curseur). Bug connu : offset entre la région sélectionnée et celle affichée.
 - redimensionnement de la partie visionnée
 - sélection de la partie zoomée dans la loupe
@@ -95,5 +94,5 @@ Ce logiciel est écrit sous Linux, et cross-compilé pour fonctionner sous Windo
 * **Font AweSome** (https://github.com/juliettef/IconFontCppHeaders ) pour les fontes-icones créées par **Juliette Foucaut**.
 * (prochainement) **TinyXML2** (https://github.com/leethomason/tinyxml2) pour les tags xml lors de l'analyse et le classement d'une vidéo.
 
-**Auteur du logiciel miniDart : Eric Bachard © 2016-2017**
+**Auteur du logiciel miniDart : Eric Bachard © 2016-2018**
 
