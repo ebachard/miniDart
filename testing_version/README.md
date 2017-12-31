@@ -26,7 +26,7 @@ N'oubliez pas de tester l'intégrité de l'archive téléchargée
 
 *******************************************************************************************************
 
-     2e1f6e487a26725e8758b86f88ca204945891d8a2f011371c4403ce38fa8b295     miniDart_0.6.8_test.exe
+     df03d49774af3523df59d31fe53b50e5183115cded65034c2d25a69bdffdb64f     miniDart_0.6.8_test.exe
 
 *******************************************************************************************************
 
@@ -45,3 +45,4 @@ N'oubliez pas de tester l'intégrité de l'archive téléchargée
      f2fbe02c24cece02f1c31c5f81c82b7d24786e7a1ca65415b15b52cb199313e2     miniDart_0.5.5_test.exe
 
 *******************************************************************************************************
+     df03d49774af3523df59d31fe53b50e5183115cded65034c2d25a69bdffdb64f     miniDart_0.6.8_test.exe
