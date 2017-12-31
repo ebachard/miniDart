@@ -1,7 +1,7 @@
-# miniDart (version actuelle : 0.6.6)
+# miniDart (version actuelle : 0.6.8)
 Logiciel d'analyse vidéo pour coachs de sports collectifs (handball, mais pas seulement)
 
-Ceci est une première version de démonstration du logiciel **miniDart**. Elle n'est pas complète, et comporte probablement quelques bugs. Une partie des fonctionnalités est encore manquante, et devrait être implémentée d'ici la fin de l'année 2017.
+Ceci est une version de démonstration du logiciel **miniDart**. Elle n'est pas complète, et comporte probablement quelques bugs. Une partie des fonctionnalités est encore manquante, et devrait être implémentée d'ici le printemps 2018.
 
 **IMPORTANT : Cadre de ce projet**
 
@@ -84,14 +84,14 @@ Informations techniques:
 Ce logiciel est écrit sous Linux, et cross-compilé pour fonctionner sous Windows 64 bits. Les APIs utilisées sont:
 * **SDL2** ( http://libsdl.org/) pour le fenêtrage et la remarquable portabilité Linux -> Windows ;
 * **OpenGL** (https://www.khronos.org/opengl/) pour le rendu ;
-* **Dear ImGui** (https://github.com/ocornut/imgui) pour l'interface utilisateur et les performances graphiques (merci à Omar Cornut pour cette UI géniale) ;
+* **Dear ImGui** (https://github.com/ocornut/imgui) pour l'interface utilisateur et les performances graphiques (merci à **Omar Cornut** pour cette UI géniale) ;
 * **OpenCV 3.4.0** (https://opencv.org/) : gestion des webcams, traitement des frames, annotations (chronomètre, enregistrement) ;
 * **DirectShow** et **DirectX** ( sous Windows) , v4l2 + gstreamer (sous Linux) : acquisition vidéo ;
 * **FFMPEG (version 3.4.0 sous Windows, 3.3.4 sous Linux)** (http://ffmpeg.org/) ouverture, analyse, export de fichiers vidéos (divx, avi etc) ;
 * **mingw-w64** (https://mingw-w64.org/doku.php) cross-compilation de la version Windows ;
 * **InnoSetup** (http://www.jrsoftware.org/) pour le packaging Windows ;
 * **wine64** (https://www.winehq.org/) pour les tests de la version Windows sous Linux;
-* **Native File Dialog** (https://github.com/mlabbe/nativefiledialog), ouverture d'un fichier, sauvegarde, écrit par Michael Labbe.
+* **Native File Dialog** (https://github.com/mlabbe/nativefiledialog), ouverture d'un fichier, sauvegarde, écrit par **Michael Labbe**.
 * **Font AweSome** (https://github.com/juliettef/IconFontCppHeaders ) pour les fontes-icones créées par **Juliette Foucaut**.
 * (prochainement) **TinyXML2** (https://github.com/leethomason/tinyxml2) pour les tags xml lors de l'analyse et le classement d'une vidéo.
 
