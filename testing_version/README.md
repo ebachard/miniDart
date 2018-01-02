@@ -27,6 +27,8 @@ Enfin, merci d'avance pour tout retour et n'oubliez pas de tester l'intégrité 
 
 Have Fun ;-)
 
+Eric Bachard
+
 
 *******************************************************************************************************
                    Somme de contrôle (sha 256)                                   Version
