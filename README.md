@@ -33,8 +33,9 @@ Webcam vivement conseillées et longuement testées :
 
 Système d'exploitation : testé sur Windows 7 et Win 10  64 bits.
 
-Ce qui est actuellement fonctionnel : 
+**Ce qui est actuellement fonctionnel** :
 
+- **Zoom** ( de x1.0 à x3.0) d'une partie de l'image // fonctionne parfaitement
 - affichage retardé (réglable jusqu'à 40s, mais pourra être augmenté. Testé OK jusqu'à 100s de retard, mais il faut beaucoup de RAM dans ce cas)
 - permet le séquençage vidéo (le son n'est pas géré pour l'instant)
 - enregistrement avec ou sans retard des images issues d'une ou plusieurs webcams (une seule peut être enregistrée à la fois)
@@ -47,11 +48,16 @@ Ce qui est actuellement fonctionnel :
 - ouvrir un fichier de type vidéo (sera utilisé pour le mode image par image et l'analyse+séquençage avec ajout de tags)
 - mode image par image (déjà disponible ici : https://github.com/ebachard/cv_slideshow fonctionne en mode "drag and drop") ;
 
-Atelier analyse :
+**Atelier analyse** :
 - ouverture d'un répertoire contenant une vidéo
 - choix du répertoire d'enregistrement par défaut des vidéos (à tester de façon plus approfondie)
+- analyse image par image : on ouver une vidéo de courte durée (30 s max conseillé) et on peut piloter le défilement
 
-Atelier suivi GB :
+À venir : annotations + enregistrement de l'image sous forme d'une vidéo de durée donnée.
+
+**Atelier suivi GB** :
+- saisie de tous les types de tirs (y compris 7m)
+- affichage des statistiques ( % d'arrêt, % de réussite, secteurs favorables, défavorables, suivi des tirs par joueur)
 - couleur du tir en fonction du résultat (but, arrêt GB, poteau, tir hors cadre)
 - tracé des impacts de tirs par glisser-déposer à la souris
 - possibilité d'ajouter une flèche, et de régler les dimensions
@@ -61,22 +67,19 @@ Atelier suivi GB :
 - saisie de la mi-temps en cours
 - mode suivi statistique type feuille de match (GB ou joueurs d'une équipe) ;
 - choix du type de tir (pour un 7m, il faut activer le bouton "7m" AVANT de tracer le tir, sinon le tir sera pris pour un tir normal)
+- icônes pour le chronomètre, les sources (webcam 1 ou 2)
 
-En cours de développement (mais déjà partiellement fonctionnel) :
+**En cours de développement** (mais déjà partiellement fonctionnel) :
 
 Atelier retard :
-- icônes pour le chronomètre, les sources (webcam 1 ou 2)
-- zoom d'une partie de l'image (réglable avec curseur). Bug connu : offset entre la région sélectionnée et celle affichée.
-- redimensionnement de la partie visionnée
-- sélection de la partie zoomée dans la loupe
-
+- tracking en temps réel
 
 Atelier GB :
+- annotations
 - saisie des conditions du tir
-- affichage des statistiques ( % d'arrêt, % de réussite, secteurs favorables, défavorables, suivi des tirs par joueur)
 
 À venir :
-- mode ralenti (slow-motion) ;
+- mode ralenti (slow-motion) // fonctionne déjà, mais demande une conversion d'OpenCV+highgui vers OpenGL
 
 Informations techniques:
 
