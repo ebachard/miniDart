@@ -1,11 +1,11 @@
-La version actuellement en test est la **0.6.8**, pour Windows 7 ou plus récent, peut-être avec Windows XP.
+La version actuellement en test est la **0.6.9**, pour Windows 7 ou plus récent, peut-être avec Windows XP.
 
 **Une version Linux peut être fournie sur demande (tout est développé sous Linux, mais je n'ai pas encore fait de version statique pour Linux)**
 
 
 Pour l'installer sous Windows, 
 
-* placer l'archive miniDart_0.6.8_test.exe téléchargée (par exemple) sur le bureau ;
+* placer l'archive miniDart_0.6.9_test.exe téléchargée (par exemple) sur le bureau ;
 * double-cliquer dessus pour lancer l'installeur ;
 * suivre les instructions.
 
@@ -32,6 +32,10 @@ Eric Bachard
 
 *******************************************************************************************************
                    Somme de contrôle (sha 256)                                   Version
+
+*******************************************************************************************************
+
+     f17f6520ad5e229ad907bdbf2231e7ca6b6f9fa483e49e1146015c86e18dc941  miniDart_0.6.9_test.exe
 
 *******************************************************************************************************
 
