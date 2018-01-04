@@ -89,7 +89,7 @@ Ce logiciel est écrit sous Linux, et cross-compilé pour fonctionner sous Windo
 * **Dear ImGui** (https://github.com/ocornut/imgui) pour l'interface utilisateur et les performances graphiques (merci à **Omar Cornut** pour cette UI géniale) ;
 * **OpenCV 3.4.0** (https://opencv.org/) : gestion des webcams, traitement des frames, annotations (chronomètre, enregistrement) ;
 * **DirectShow** et **DirectX** ( sous Windows) , v4l2 + gstreamer (sous Linux) : acquisition vidéo ;
-* **FFMPEG (version 3.4.0 sous Windows, 3.3.4 sous Linux)** (http://ffmpeg.org/) ouverture, analyse, export de fichiers vidéos (divx, avi etc) ;
+* **FFMPEG (version 3.4.0 sous Windows, 3.4.1 devel sous Linux)** (http://ffmpeg.org/) ouverture, analyse, export de fichiers vidéos (divx, avi etc) ;
 * **mingw-w64** (https://mingw-w64.org/doku.php) cross-compilation de la version Windows ;
 * **InnoSetup** (http://www.jrsoftware.org/) pour le packaging Windows ;
 * **wine64** (https://www.winehq.org/) pour les tests de la version Windows sous Linux;
