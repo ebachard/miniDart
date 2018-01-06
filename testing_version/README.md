@@ -18,18 +18,18 @@ N.B. : merci de me contacter directement en cas de problème avec les instructio
 * il est recommandé de choisir un répertoire de travail dans lequel on peut enregistrer des documents ( très utile pour l'enregistrement des séquences vidéos)
 
 
-** Installation sous Linux Intel**  (64 bits seulement)
+**Installation sous Linux Intel**  (64 bits seulement)
 
 - télécharger l'archive miniDart_0.6.9_Linux_x86_64.tar.gz
 - une fois téléchargée, décompresser l'archive dans un répertoire dans lequel vous avez le droit d'écrire.
 - l'arborescence tient compte des dépendances, et si vous la modifiez, cela ne fonctionnera pas.
 - pour tester, il y a deux possibilités :
 
-SOIT (sans droits administrateur) :
+**Soit SANS droits administrateur** :
 - se placer dans le répertoire qui contient les binaires miniDart et miniDart_s
 - taper la commande :  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:. ./miniDart
 
-SOIT AVEC DROITS ADMINISTRATEURS
+**Soit AVEC droits administrateur**
 
 Si la méthode ci-dessus ne fonctionne pas, il faudra tester sur une machine où vous avez les droits administrateur (avec sudo):
 
@@ -41,7 +41,7 @@ sudo ldconfig
 
 => ensuite, dans le répertoire où vous avez décompressé l'archive, il suffit de taper dans un terminal, la ligne de commande :
 
-./miniDart
+**./miniDart**
 
 N.B.: il faut que la webcam (C920 fortement suggérée) sois BRANCHÉE AVANT DE LANCER miniDart (sous Linux)
 
