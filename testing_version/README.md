@@ -29,6 +29,8 @@ N.B. : merci de me contacter directement en cas de problème avec les instructio
 - se placer dans le répertoire qui contient les binaires miniDart et miniDart_s
 - taper la commande :  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:. ./miniDart
 
+=> l'application devrait se lancer (il faut la webcam branchée sous Linux, contrairement à Windows)
+
 **Soit AVEC droits administrateur**
 
 Si la méthode ci-dessus ne fonctionne pas, il faudra tester sur une machine où vous avez les droits administrateur (avec sudo):
