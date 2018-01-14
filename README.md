@@ -74,7 +74,8 @@ Système d'exploitation : testé sur Windows 7 et Win 10  64 bits.
 **En cours de développement** (mais déjà partiellement fonctionnel) :
 
 Atelier retard :
-- [] tracking en temps réel
+- [ ] tracking en temps réel
+- [ ] repères visuels en temps réel
 
 Atelier GB :
 - [ ] annotations
