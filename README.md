@@ -1,5 +1,4 @@
-
-                                      **VERSION EN FRANCAIS** (english version follows)
+**VERSION EN FRANCAIS** (english version follows)
 
 # miniDart (version actuelle : 0.6.9)
 Logiciel d'analyse vidéo pour coachs de sports collectifs (handball, mais pas seulement)
@@ -107,10 +106,9 @@ Ce logiciel est écrit sous Linux, et cross-compilé pour fonctionner sous Windo
 **Auteur du logiciel miniDart : Eric Bachard © 2016-2018**
 
 
-                                        **ENGLISH VERSION**
+**ENGLISH VERSION**
 
 #miniDart (current version: 0.6.9)
-
 Video analysis software for team sports coaches (handball, but not only)
 
 This is a demo version of the **miniDart** software. It is not complete, and probably has some bugs. Some of the features are still missing, and should be implemented by spring 2018.
