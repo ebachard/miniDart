@@ -1,3 +1,6 @@
+
+                                      **VERSION EN FRANCAIS** (english version follows)
+
 # miniDart (version actuelle : 0.6.9)
 Logiciel d'analyse vidéo pour coachs de sports collectifs (handball, mais pas seulement)
 
@@ -103,3 +106,116 @@ Ce logiciel est écrit sous Linux, et cross-compilé pour fonctionner sous Windo
 
 **Auteur du logiciel miniDart : Eric Bachard © 2016-2018**
 
+
+                                        **ENGLISH VERSION**
+
+#miniDart (current version: 0.6.9)
+
+Video analysis software for team sports coaches (handball, but not only)
+
+This is a demo version of the **miniDart** software. It is not complete, and probably has some bugs. Some of the features are still missing, and should be implemented by spring 2018.
+
+**IMPORTANT: Framework for this project**
+
+**A handball development project is underway. The miniDart software will be one of the resources used for its financing. The goal is to fund an international handball tournament for a young women's team (-13)**
+
+**Thus, the software miniDart, when complete, will be sold first. When enough money has been recovered, the sources of the software will be licensed under the GPL.**
+
+Two versions are available for download. One for **Windows 7 or later**, the other for **Linux Intel (64 bits)** . For the Linux version, instructions are given in the directory containing the archives.
+
+The download version needs Windows 7 or more + to work, and comes with an installer. The uninstallation has also been tested, and removes all traces of the software. If you install it , note that you use this software at your own risk, and remember that it is imperative to make backups of your documents BEFORE using it.
+
+**For download, click here: https://github.com/ebachard/miniDart/tree/master/testing_version**
+
+Prerequisites
+
+If the ambient light is sufficient, we can view and record images from a webcam (prefer the recommended + low) at the rate of 30 frames per second in 1270 x 720 (aka 720p). The recording is currently in .avi format with the encoding divx. The sound is not currently managed. The Linux version works similarly, but in 24 frames per second.
+
+Hardware Processors / RAM advised:
+
+* i5 + 4 GB minimum
+* i7 + 8GB comfortable :+1:
+
+The installation requires ~ 35 MB of disk space + space for the created video files.
+
+Webcam highly recommended and extensively tested:
+
+- Logitech C920 :+1: (30 frames per second, but requires good light)
+- Logitech C922 :+1: (ask for a good light)
+- Microsoft Lifecam C3000: sometimes asks to restart once miniDart, (asks for a good light) 
+
+Operating system: tested on Windows 7 and Win 10 64-bit.
+
+What is currently functional :
+
+- [x]    Zoom (from x1.0 to x3.0 and up to x4.0 for Linux version) of part of the image // works perfectly
+- [x]    delayed display (adjustable up to 40s, but can be increased, tested OK up to 100s delay, but you need a lot of RAM in this case)
+- [x]    allows video sequencing (the sound is not managed at this time)
+- [x]    recording with or without delay images from one or more webcams (only one can be recorded at a time)
+- [x]    stopwatch: you can add the stopwatch, and embed the time in recorded videos
+- [x]    display of the activity time (cumulative if stopwatch activated) and / or the total time (since the first press start)
+- [x]    live webcam change (however it is advisable to start miniDart WITH the webcam connected)
+- [x]    editable theme (preferences tab)
+- [x]    the entire user interface is editable during operation, but is not memorized for the next start)
+- [x]    the statistics mode is being implemented, and any suggestion of improvement is welcome
+- [x]    open a video type file (will be used for image-per-image mode and analysis + sequencing with tagging)
+- [x]    image by image mode (already available here: https://github.com/ebachard/cv_slideshow works in "drag and drop" mode); 
+
+Workshop analysis :
+
+- [x]    open a directory containing a video
+- [x]    choice of default video recording directory (to be tested further)
+- [x]    image-by-image analysis: we open a video of short duration (30s maximum recommended) and we can control the scrolling 
+
+Upcoming: annotations + recording of the image as a video of a given duration.
+
+GK follow-up workshop :
+
+- [x]    capture of all types of shots (including 7m)
+- [x]    display of statistics (% off,% success, favorable, unfavorable sectors, tracking shots per player)
+- [x]    shot color according to the result (goal, stop GB, post, shot outside frame)
+- [x]    dragging shots to the mouse
+- [x]    ability to add an arrow, and adjust the dimensions
+- [ ]    adding the shooter's number (known bug, does not work properly yet)
+- [x]    enter name of GB / GB followed
+- [x]    entry level championship / training mode or match / match mode, for the N2F, club choice
+- [x]    current half-time
+- [x]    statistical follow-up mode type sheet of match (GB or players of a team);
+- [x]    choice of the type of shot (for a 7m, you have to activate the "7m" button BEFORE you draw the shot, otherwise the shot will be taken for a normal shot)
+- [x]    icons for stopwatch, sources (webcam 1 or 2) 
+
+Under development (but already partially functional):
+
+Workshop delay:
+
+- [ ]    real-time tracking
+- [ ]    visual cues in real time 
+
+GK Workshop:
+
+- [ ]    annotations
+- [ ]    capture shooting conditions 
+
+To come up :
+
+- [ ]    slow-motion mode // works already, but requires conversion from OpenCV + highgui to OpenGL 
+
+Technical informations:
+
+This software is written on Linux, and cross-compiled to run on 64-bit Windows. The APIs used are:
+
+* **SDL2** ( http://libsdl.org/ ) for windowing and remarkable portability Linux -> Windows;
+* **OpenGL** ( https://www.khronos.org/opengl/ ) for rendering;
+* **Dear ImGui** ( https://github.com/ocornut/imgui ) for user interface and graphics performance (thanks to **Omar Cornut** for this awesome UI);
+* **OpenCV 3.4.0** ( https://opencv.org/ ): management of webcams, processing of frames, annotations (stopwatch, recording);
+* **DirectShow** and **DirectX** (on Windows), v4l2 + gstreamer (on Linux): video acquisition;
+* **FFMPEG (version 3.4.0 on Windows, 3.4.1 devel on Linux)** ( http://ffmpeg.org/ ) opening, analysis, export of video files (divx, avi etc);
+* **mingw-w64** ( https://mingw-w64.org/doku.php ) cross-compilation of the Windows version;
+* **InnoSetup** ( http://www.jrsoftware.org/ ) for Windows packaging;
+* **wine64** ( https://www.winehq.org/ ) for testing the Windows version on Linux;
+* **Native File Dialog** ( https://github.com/mlabbe/nativefiledialog ), open file, save, written by **Michael Labbe** .
+* **Font AweSome** ( https://github.com/juliettef/IconFontCppHeaders ) for font-icons created by **Juliette Foucaut** .
+* **(coming soon) **TinyXML2** ( https://github.com/leethomason/tinyxml2 ) for xml tags when analyzing and ranking a video.
+* **(in test) **SDL_kitchensink** ( https://github.com/katajakasa/SDL_kitchensink ) for sound in videos (reading AND recording) 
+
+Author of miniDart software: Eric Bachard © 2016-2018 
