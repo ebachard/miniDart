@@ -1,6 +1,6 @@
 **VERSION EN FRANCAIS** (english version follows)
 
-# miniDart (version actuelle : 0.6.9)
+# miniDart (version actuelle : 0.7.0)
 Logiciel d'analyse vidéo pour coachs de sports collectifs (handball, mais pas seulement)
 
 Ceci est une version de démonstration du logiciel **miniDart**. Elle n'est pas complète, et comporte probablement quelques bugs. Une partie des fonctionnalités est encore manquante, et devrait être implémentée d'ici le printemps 2018.
@@ -51,11 +51,14 @@ Système d'exploitation : testé sur Windows 7 et Win 10  64 bits.
 - [x] le mode statistiques est en cours d'implémentation, et toute suggestion d'amélioration est la bienvenue
 - [x] ouvrir un fichier de type vidéo (sera utilisé pour le mode image par image et l'analyse+séquençage avec ajout de tags)
 - [x] mode image par image (déjà disponible ici : https://github.com/ebachard/cv_slideshow fonctionne en mode "drag and drop") ;
+- [x] selon l'installation, il est possible de régler directement les paramètres de la webcam, comme la luminance, etc  (onglet "paramètres")
+
 
 **Atelier analyse** :
 - [x] ouverture d'un répertoire contenant une vidéo
 - [x] choix du répertoire d'enregistrement par défaut des vidéos (à tester de façon plus approfondie)
 - [x] analyse image par image : on ouver une vidéo de courte durée (30 s max conseillé) et on peut piloter le défilement
+- [x] modification de la taille de l'image en mode slideshow
 
 À venir : annotations + enregistrement de l'image sous forme d'une vidéo de durée donnée.
 
@@ -76,6 +79,9 @@ Système d'exploitation : testé sur Windows 7 et Win 10  64 bits.
 **En cours de développement** (mais déjà partiellement fonctionnel) :
 
 Atelier retard :
+
+- [ ] ajout d'une source vidéo de type fichier vidéo
+- [ ] ajout d'une source vidéo de type webcam IP
 - [ ] tracking en temps réel
 - [ ] repères visuels en temps réel
 
@@ -108,7 +114,7 @@ Ce logiciel est écrit sous Linux, et cross-compilé pour fonctionner sous Windo
 
 **ENGLISH VERSION**
 
-#miniDart (current version: 0.6.9)
+#miniDart (current version: 0.7.0)
 Video analysis software for team sports coaches (handball, but not only)
 
 This is a demo version of the **miniDart** software. It is not complete, and probably has some bugs. Some of the features are still missing, and should be implemented by spring 2018.
@@ -186,6 +192,8 @@ Under development (but already partially functional):
 
 Workshop delay:
 
+- [ ]    use a video file as video source
+- [ ]    use an IP webcam as video source
 - [ ]    real-time tracking
 - [ ]    visual cues in real time 
 
