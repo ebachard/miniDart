@@ -1,4 +1,4 @@
-La version actuellement en test est la **0.6.9**
+La version actuellement en test est la **0.7.0**
 
 N.B. : merci de me contacter directement en cas de problème avec les instructions.
 
