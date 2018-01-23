@@ -40,7 +40,7 @@ Système d'exploitation : testé sur Windows 7 et Win 10  64 bits.
 **Ce qui est actuellement fonctionnel** :
 
 - [x] **Zoom** ( de x1.0 à x3.0 et jusqu'à x4.0 pour la version Linux) d'une partie de l'image // fonctionne parfaitement
-- [x] affichage retardé (réglable jusqu'à 40s, mais pourra être augmenté. Testé OK jusqu'à 100s de retard, mais il faut beaucoup de RAM dans ce cas)
+- [x] affichage retardé (réglable jusqu'à 40s, mais pourra être augmenté en cas de besoin spécifique (à la demande). Testé OK jusqu'à 100s de retard, mais il faut beaucoup de RAM dans ce cas)
 - [x] permet le séquençage vidéo (le son n'est pas géré pour l'instant)
 - [x] enregistrement avec ou sans retard des images issues d'une ou plusieurs webcams (une seule peut être enregistrée à la fois)
 - [x] chronomètre : on peut ajouter le chronomètre, et incruster le temps dans les vidéos enregistrées
