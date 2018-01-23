@@ -55,7 +55,7 @@ ENREGISTREMENT : 1280 x 720 à 30 images par secondes est le SEUL FORMAT QUI DEV
 
 => Je n'ai pas assez de retour pour en conseiller d'autres pour l'instant.
 
-Le numéro des joueurs ne FONCTIONNE PAS CORRECTEMENT (le même numéro est attribué à tous les joueurs). Cela sera corrigé dans la version 0.7 à venir.
+Le numéro des joueurs ne FONCTIONNE PAS CORRECTEMENT (le même numéro est attribué à tous les joueurs). Cela sera corrigé dans la version 0.7.1 à venir.
 
 
 Enfin, merci d'avance pour tout retour et n'oubliez pas de tester l'intégrité de l'archive téléchargée 
