@@ -181,7 +181,7 @@ GK follow-up workshop :
 - [x]    dragging shots to the mouse
 - [x]    ability to add an arrow, and adjust the dimensions
 - [ ]    adding the shooter's number (known bug, does not work properly yet)
-- [x]    enter name of GB / GB followed
+- [x]    enter name of the followed GK
 - [x]    entry level championship / training mode or match / match mode, for the N2F, club choice
 - [x]    current half-time
 - [x]    statistical follow-up mode type sheet of match (GB or players of a team);
