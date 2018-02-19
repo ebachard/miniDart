@@ -11,7 +11,7 @@ Ceci est une version de démonstration du logiciel **miniDart**. Elle n'est pas 
 
 **Ainsi, le logiciel miniDart, lorsqu'il sera complet, sera dans un premier temps vendu. Quand suffisamment d'argent aura été récupéré, les sources du logiciel seront mises sous licence GPL.**
 
-Deux versions sont disponibles au téléchargement. **L'une pour Windows 7** ou plus récent, l'autre pour **Linux Intel (64 bits)**. Pour la version Linux, des instructions sont données dans le répertoire contenant les archives.
+Deux versions sont disponibles au téléchargement. **L'une pour Windows 7 (64 bits)** ou plus récent, l'autre pour **Linux Intel (64 bits)**. Pour la version Linux, des instructions sont données dans le répertoire contenant les archives.
 
 La version en téléchargement a besoin de Windows 7 ou plus + pour fonctionner, et vous est fournie avec un installeur. La désinstallation a aussi été testée, et supprime toute trace du logiciel. **Si vous l'installez**, notez que vous utilisez ce logiciel à vos risques et périls, et n'oubliez pas qu'il est impératif de faire des sauvegardes de vos document AVANT de l'utiliser.
 
@@ -35,7 +35,7 @@ Webcam vivement conseillées et longuement testées :
 - Logitech C922 :+1: (demande une bonne lumière)
 - Microsoft Lifecam C3000 : demande quelquefois de relancer une fois miniDart, (demande une bonne lumière)
 
-Système d'exploitation : testé sur Windows 7 et Win 10  64 bits.
+Système d'exploitation : testé sur Windows 7 et Win 10  64 bits (une version de test en 32 bits est disponible, mais sur demande uniquement).
 
 **Ce qui est actuellement fonctionnel** :
 
@@ -125,7 +125,7 @@ This is a demo version of the **miniDart** software. It is not complete, and pro
 
 **Thus, the software miniDart, when complete, will be sold first. When enough money has been recovered, the sources of the software will be licensed under the GPL.**
 
-Two versions are available for download. One for **Windows 7 or later**, the other for **Linux Intel (64 bits)** . For the Linux version, instructions are given in the directory containing the archives.
+Two versions are available for download. One for **Windows 7 (64 bits) or later**, the other for **Linux Intel (64 bits)** . For the Linux version, instructions are given in the directory containing the archives.
 
 The download version needs Windows 7 or more + to work, and comes with an installer. The uninstallation has also been tested, and removes all traces of the software. If you install it , note that you use this software at your own risk, and remember that it is imperative to make backups of your documents BEFORE using it.
 
@@ -148,7 +148,7 @@ Webcam highly recommended and extensively tested:
 - Logitech C922 :+1: (ask for a good light)
 - Microsoft Lifecam C3000: sometimes asks to restart once miniDart, (asks for a good light) 
 
-Operating system: tested on Windows 7 and Win 10 64-bit.
+Operating system: tested on Windows 7 and Win 10 64-bit (a 32 bits version forwin7+ is available, but on demand only).
 
 What is currently functional :
 
