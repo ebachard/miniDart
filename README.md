@@ -133,7 +133,7 @@ The download version needs Windows 7 or more + to work, and comes with an instal
 
 Prerequisites
 
-If the ambient light is sufficient, we can view and record images from a webcam (prefer the recommended + low) at the rate of 30 frames per second in 1270 x 720 (aka 720p). The recording is currently in .avi format with the encoding divx. The sound is not currently managed. The Linux version works similarly, but in 24 frames per second.
+If the ambient light is sufficient, we can view and record images from a webcam (prefer the recommended models below) at the rate of 30 frames per second in 1270 x 720 (aka 720p). The recording is currently in .avi format with the encoding divx. The sound is not currently managed. The Linux version works similarly, but in 24 frames per second.
 
 Hardware Processors / RAM advised:
 
