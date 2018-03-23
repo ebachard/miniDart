@@ -16,7 +16,7 @@ N.B. : merci de me contacter directement en cas de problème avec les instructio
 
 * il est recommandé d'**ajouter un raccourci** sur le bureau pour l'utiliser plus facilement.
 * il est recommandé de choisir un répertoire de travail dans lequel on peut enregistrer des documents ( très utile pour l'enregistrement des séquences vidéos)
-* SEUL l'enregistrement en 1280 x 720 fonctionne actuellement.
+* SEUL l'enregistrement en 1280 x 720 (30 images par seconde) fonctionne actuellement.
 
 **INSTALLATION SOUS LINUX INTEL**  (64 bits seulement)
 
@@ -51,7 +51,9 @@ N.B.: il faut que la webcam (C920 fortement suggérée) sois BRANCHÉE AVANT DE 
 
 **Bugs connus**
 
-ENREGISTREMENT : 1280 x 720 à 30 images par secondes est le SEUL FORMAT QUI DEVRAIT FONCTIONNER.
+ENREGISTREMENT : 1280 x 720 à 30 images par secondes est le SEUL FORMAT QUI DEVRAIT FONCTIONNER sous Windows.
+
+(et 24 images par seconde sous Linux)
 
 => Je n'ai pas assez de retour pour en conseiller d'autres pour l'instant.
 
