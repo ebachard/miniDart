@@ -5,7 +5,7 @@ N.B. : merci de me contacter directement en cas de problème avec les instructio
 
 **Pour l'installer sous Windows**
 
-**Installation sous Windows 7** ou plus récent :
+**INSTALLATION SOUS WINDOWS 7** ou plus récent :
 
 * télécharger l'archive miniDart_0.7.0_test.exe
 * placer cette archive dans un endroit facile d'accès, par exemple sur le bureau ;
@@ -18,7 +18,7 @@ N.B. : merci de me contacter directement en cas de problème avec les instructio
 * il est recommandé de choisir un répertoire de travail dans lequel on peut enregistrer des documents ( très utile pour l'enregistrement des séquences vidéos)
 * SEUL l'enregistrement en 1280 x 720 fonctionne actuellement.
 
-**Installation sous Linux Intel**  (64 bits seulement)
+**INSTALLATION SOUS LINUX INTEL**  (64 bits seulement)
 
 - télécharger l'archive miniDart_0.6.9_Linux_x86_64.tar.gz
 - une fois téléchargée, décompresser l'archive dans un répertoire dans lequel vous avez le droit d'écrire.
