@@ -1,4 +1,4 @@
-![miniDart 0.9 WIP](screenshots/miniDart_0.9_dev_Dark_theme_2018_04_26.png)
+![miniDart 0.9 WIP](screenshots/miniDart_0.9_dev_Dark_theme_2018_04_26_mini.png)
 
 **VERSION EN FRANCAIS** (english version follows)
 
