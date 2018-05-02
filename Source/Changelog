@@ -1,0 +1,1372 @@
+Changelog of miniDart
+Copyright Eric Bachard 2016-2018  Software created the 1st AUGUST 2016
+
+
+2018 May 2nd
+
+Added 4 new fourcc (codecs): Divx 5.0 (DX50), FLV1, U263 and H264 // tested on Linux using .avi contained ONLY (no sound)
+N.B. : H264 needs libx264 to work, means OpenCv to be compiled and linked to it)
+Created the sources skeleton + added licenses and diffs at every needed places
+Fixed: fps is a double, not an int (cf : https://docs.opencv.org/3.3.0/dd/d9e/classcv_1_1VideoWriter.html)
+
+2018 May 1st
+
+More layout improvements
+Added an option to reset video container and codec to default value
+Continued code factorization
+Implemented live resizing : works very well // yet some little glitches, but nothing important
+Fixed the layout issue with the webcam parameters : the widget does no longer overlap the edge
+Capture device parameters and output device (recorder) parameters are now separated
+Implemented  new modal dialog box "advanced parameters" for record settings
+- available containers are : .avi, .mp4, .mkv
+- vailable video codecs are : DIV3, DIVX, MJPG, FMP4
+
+FIXME : 
+Implemented, but disabled because won't work until features will be added :
+- set fps. Current available fps are: 15, 20, 24, 30  // won't work until the main loop is modified
+Implemented, but (won't work until "resize Mat dimensions" will be used)
+- set recorded images size. Current available image sizes for recording : 640x480, 800x600, 960x540, 1280x720, 1440x1080, 1920x1080
+
+2018 April 30th
+
+Dropped eMode // Visualization, etc
+Fixed cosmetics in selected tab (moving from 1 to 2 pixels from left to right (and vice versa)
+moved enum aTheme in application.hpp
+created external b_lostWebcam
+created resetWebcam.hpp and resetWebcam.cpp
+
+
+2018 April 26th
+
+ImGui Tabs:
+Code cleanup
+Resync'ed the code with Dear ImGui 1.61 WIP
+Added IMGUI_VERSION_160_OR_MINUX GUARD for old code
+Lot of simplifications inside imgui_tabs.{h|cpp} code
+Simplified the interface :
+- removed :ImGuiUserCol_TabHover, ImGuiUserCol_TabTitleTextNormal, ImGuiUserCol_TabTitleTextSelected,
+- now using ImGui themes
+- added StyleColorsLightGreen() theme, since it is miniDart legacy theme
+- removed duplicated code
+- improved the tabs colors, and text colors
+
+Commited a little screenshot (dark theme)
+Implemented 4 themes, fully selectable in miniDart :
+- LightGreen
+- Dark
+- LightBlue
+- Classic
+
+Removed setStyle() // saved > 200 lines of code !
+
+
+2018 April 25th
+
+UI Theme : Improved the UI colors, now using the main theme + added more light is the visual effect
+UI Theme : FIXME: improve the uggly blue for ImGuiColButtonActive color :-/
+Layout : Fixed the useless menubar in the tabbar. Now the look appear better (no more 20 pixels height lost)
+Code :Using FFMPEG 4.0 on Linux
+Imaging : FIXME : follow https://github.com/opencv/opencv/issues/11324 (MPEG issue confirmed)
+
+2018 April 22nd
+
+Testing panorama : https://github.com/ronen25/panorama, extremely well written
+Bumped the FFMPEG version to 4.0 // OpenCv and OBS seem to be happy :-)
+
+Added FFMPEG_Player (under LGPL), forked from https://github.com/hansonLGE/Player_custom_ffmpeg
+It means images AND sound can be managed inside miniDart.
+
+Current status :
+- the code compiles well, but will need to be linked as LGPL library in the future.
+- a lot of work (understand how it works really)
+- some removing and cleanup to be used inside miniDart.
+- rewrite a class for loading / pausing and unloading a movie 
+
+Fixed the CaptureDev class : works very well, and allows to separate the webcam feature from the
+other software features.
+TODO : write the application class, including style setting, write tab contents
+
+Tested 1.61 WIP ImGui : seems to add an extra overload, for unneeded features.
+Added IMGUI_VERSION_160_OR_MINUS flag : undef it allows to test 1.61 WIP
+Fixed the hack with fonts in ImGui.cpp: it is no longer needed to add the default font.
+
+
+2018 February 19th
+
+Win32 version can be built and tested using wine64 now. Not yet sure it works on a legacy win32 bits though. 
+Tests in progress ...
+Fixed for true the looding twice the clip in analysis tab. Little issue : on Linux, the allocated me is not immediately released,
+causing an useless memory overload. No problem at all on windows.
+
+TODO : fix the 2GB issue on 32 bits applications, e.g. with a more intelligent algorithm only loading a "scope " of images.
+For example : only load 5s of images before and 5s of images after the current frame number,
+to avoid the 2GB memory limitation hit.
+
+
+2018 February 17th
+Now using ImGui 1.60 WIP (including the new context feature) + OpenGL 3.x only
+Removed -DUSE_GL3 flag, now obsolete
+Did some cleanup in the makefile
+
+2018 February 13th
+
+Got OpenGL 3.3 working !!
+SDL_Init() MUST be set BEFORE SDL_GL_SET_ATTRIBUTE(), and finaly OpenGL > 3.0 works :-)
+Removed  -DUSE_GL3 extra option at build_time.
+Idea : be able to select at launchtime ? (just in case of very-old hardware ?)
+
+2018 January 24th
+
+Worked at the canvas
+Fixed undefined zoom dimensions at first launch
+Fixed a crash with the last searched image in the slideshow
+Fixed a big overload when opening a video file ( initVideo() was called twice)
+
+2018 January 23rd
+
+Prepared the canvas in ANALYSIS Tab
+Removed useless booleans and variables :
+- b_draw_label
+- b_draw_vector_of_annotations
+- b_watching_video_file
+- b_watching_goalkeeper
+
+New state machine, new events implementation (TODO : improve me)
+Improved the logical.
+Fixed a crash caused be open a file outside of analysis tab selected.
+Fixed yet another shortcut bug with recording and pausing
+The user can now choose the prefered modifier (in Preferences tab)
+To avoid clashes with entering a string, I modified some shorcuts :
+- record : was " r ", is now prefered modifier + r
+- delay  : was " d ", is now prefered modifier + d
+
+2018 January 19th
+
+Improved the layout (bottom was non drawn)
+Fixed the issue when directly recording after selection of the default folder for movies. 
+Now it is up to the user to start the recording.
+We now can produce MJPG as .mp4 or (DIVX as .avi)
+Fixed a silly bug due to cv::CAP_DSHOW not correctly used (capture_dev had a wrong value)
+Prepared code factorization / class writing 
+Implemented, and now systematicaly using resetWebcam + new signature (shouldn't it be set ?)
+Removed splines (unused) code
+Implemented a third choice network source (IP webcam)
+Now using popup to select the video flow source
+FIXME : not working on Linux, untested on Windows
+
+Removed crop bazaar
+
+2018 January 15th
+
+Added the lines to prepare IP webcam use (should be straight forward).
+Started FFMPEG + SDL2 
+- watching a video (sound + frames) : SDL_kitchensinc (MIT)
+- recording a video (no sound yet) : based on fplayer but not only (license ?)
+Working : 
+- open a video+audio but play the video only
+- open a video + sound, and play it 
+- catch the sound only (e.g mp3 music)
+- demux a video + audio in two flows
+
+TODO : learn how to mux and create a new video
+
+
+2018 January 8th
+
+More Zoom fixes :
+- it is now resizable.
+  Pro : the size we need, easy, and natural ;
+  Cons : ratio is no longer guaranteed.
+- the zoom value does no longer appear (was not reliable)
+- ImGuiWindowFlags is set to ImGuiWindowFlags_NoSavedSttings (means same size every time, when opening)
+
+2018 January 4th
+
+FIXME :
+- wrong 7m pop_back count ?
+- number 
+
+
+RELEASED 0.6.9 bcause the zoom works very well
+
+Now, the main window fits the SDL window (the Demo window is de facto no longer reachable)
+Modified : change the coloredrectangle for the zoom area behavior.
+=>now, the color is modifiable only when the lense is disabled.
+
+Fixed the ZOOM : after some computations, it finaly works fine :
++ added funky color to the focused lense window ;
++ minimal dimensions (to allow always being able to closing it) ;
++ centered image ;
++ zoom until 3.0 + the zoom value looks realistic ;
++ no crash ;
++ avoid resizing outside of the image, bcause the colored rectangle won't be drawn correctly.
+
+2017 December 31st
+
+RELEASE DAY : version 0.6.8 (Canvas started)
+
+Fixed the capture_dev and frame initialization issues on both Windows and Linux.
+Changed the window size for locked (ImGui demo is now no longer reachable, but on Linux)
+Fixed 7m wrong count (was a missing unPenalty.pop_back() when removing last shoot )
+The Zoom seems to work correctly (remains an offset on top, but nothing too bad)
+Known issue : shooters number does not work (only the last number appears, and the file is lost)
+TODO for 0.7 :
+- write two new classes. One is shooters_manager and the second is shhoters.
+- write a users guide, including screenshots, to explain all the proposed features
+
+2017 December 30th
+
+Zoom seems to work correctly. Some improvements are still needed.
+Started the shooters class implementation
+Fixed : the Lense stays on top now (ImGui::SetNextWindowFocus())
+Definitely added FontAwesome from Juliette Foucaut + added files and licenses in the sources
+
+2017 December 29th
+
+7m seems to work now
+Added 7M (was missing ! :-/ )
+Testing Icon fonts with FontAwesome ( webcam, folder, clock, play / pause and so on)
+Fixed the timer issue  (b_timer_paused didn't not work as expected)
+Fixed yet another issue with a missing shooters.pop_back()
+
+2017 December 28th
+
+Recent changes :
+
+Now using FFMPEG 3.3.4 and OpenCV 3.4.0 + SDL2 2.0.5
+Already included (but not used) : Tinyxml2
+Tests in progress : Sini (serialisation for ImGui)
+
+TODO BEFORE TO RELEASE :
+[Next version, because NEEDS mingw64 5.0.x]  Workaround the Windows 10 resolution issue
+[DONE] Fix the cropped frame issue (with lense)
+
+Canvas : we can draw letters (any loaded font) in a given clipped rectangle now.
+List of currently drawable objects  
+- rectangle empty or filled (of a given color)
+- circle empty of filled (of a given color)
+- letters in a clipped rectangle
+- lines (2 points), of a given color
+- images as texture in a given area
+
+Needs more work: 
+- create a file of numbers to be push/poped, representing the shooters numbers
+- bezier curves (2 points + 2 control points) of a given color
+
+Modal + contextual menus work as expected
+Insert text seems to work now
+Undo now works (including cancel last action)
+Stats seems to be ok now
+
+Enter Text works. e.g. show the shooters numbers starts to work.
+
+
+2017 December 27th
+
+Implemented a contextual menu to modify the arrows, and what has to be typed (shooter number e.g.)
+We can draw arrows, and modify them alive
+Statistics start to work: some percents are correct
+We can undo shoots, and stats are right
+Continued the canvas implementation
+Removed right click to remove the last shoot (allow to add a contextual menu is prefered)
+
+2017 December 25th 
+
+Fixed some crashes with the lense (select outside the frame is now working better,
+                   and now accidentaly crashes. Was every time :-/ )
+We now see the color picker at launch (the previous area height value was too little).
+TODO : remove the webcam needed at launch, write classes and factorize the code the C++ way
+Started : how to draw text (the idea is to add the shooter number beside the shoot)
+Started : how to draw bezier curves ? (using the current algo)
+Did some code cleanup
+We can add statistics or not.
+Select the statistics forces to enter the shooter number
+Fixed the rectangle thickness (2.0 now)
+Fixed some crashes
+Improved the layout (GK statistics)
+
+2017 December 24th
+
+Improved the playground for GB statistics.
+FIXME : what is expected ? // radiobutton OR popup and list ?
+Done : let's reset the shooter number every time
+
+
+2017 December 22nd
+
+Continued code cleanup
+Working at bezier curves
+Started working at using some icon-font (e.g. AwesomeFont from Juliette F.)
+
+2017 December 19th
+
+Released 0.6.6 (because of crashes)
+
+FIXED the crash caused by undefined default path to save videos // 
+
+WORKING AT : save once, and be able to modify it ?
+
+Improved the UI when doing GK follow up
+- select the shoot type
+- trace the line => opens a modal dialog box asking to enter shooter name + more information about the shoot
+- validate the shoot increments the statistics
+NEXT : fix several issues with the lense (disable it currently ?)
+
+2017 Decembre 15th 
+
+Released 0.6.5 + uploaded the archives on the Github repo, because I had to ga away from home several days
+URGENT : Will need to upgrade asap, due to some crashes on Windows
+
+2017 December 10th
+
+Now we can select the image format, BUT we can only record in 720P (FIXME)
+TODO :
+START WITH
+- select
+- select the output video format ( .mp4, dixv, and so on) 
+
+END WITH :
+- retrieve the webcam profile, and ONLY propose what works
+
+Improved the layout
+Started to fix the lense issues
+- fixed some instant crashes ( pause webcam when the lense is started, and so on)
+- made some code cleanup
+
+2017 December 8th 
+
+Atelier Analyse, improved the layout
+- select source (webcam or video)
+- select the webcam
+- select the work path to save videos
+
+Fixed a crash when b_paused is true, while clicking "show the lense".
+Started the new scenario when entering a new shoot // GK follow up
+
+
+2017 November 18th
+
+Fixed all last warnings :
+
+1. https://github.com/ocornut/imgui/pull/1445
+
+../../imgui_draw.cpp:93:54: warning: ‘spc.stbtt_pack_context::nodes’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ #define STBTT_free(x,u)    ((void)(u), ImGui::MemFree(x))
+
+
+2. https://github.com/ebachard/Kiwi8/commit/e441e2ceeccc0b75d0a6da59ed8cabca0dbb77b7
+https://github.com/ebachard/Kiwi8/commit/e441e2ceeccc0b75d0a6da59ed8cabca0dbb77b7
+
+3. 
+
+ warning: format not a string literal and no format arguments [-Wformat-security]
+             ImGui::Text(names[selected_level]);
+
+
+TODO : organize everything ...
+STARTED : the ZOOM somewhat works. The problem is some wrong coordinate somewhere
+STARTED the CANVAS 
+Works (improve me) : we can draw Bezier curves, of any color. Not working : control points are not accessible yet
+Works (improve me) : we can draw circles, or filled circles, of any color  // FIXME : learn more how it exactly works
+Works (improve me) : we can now draw colored lines
+Works (improve me) : we can now draw rectangles, filled colored rectangles, of any color
+
+2017 November 12nd
+
+TODO : implement the same for other handball players
+Improve the playground image, e.g. including sectors ?
+Fixed a dumb typo.
+Modified the tab name for "GK follow up"
+Improved the layout
+- added half-time selection
+- added "backup the follow up" button
+- added N2F teams + the right case to be selected
+Missing : knowing the colors, draw associated cubic splines + allow points to be moved.
+Added colored shoots : fails / success / out /  for the GK
+Added : title, name of the GK, level, all teams in the group, adverse team, championship, match or training
+
+2017 November 11th
+
+Implemented columns includng vertical splitters // FIXME : overlap (wrong initial values ?)
+Implemented Handball playground drawing, using Child windows
+Implemented types of shoots
+Implemented shoots and goals stops
+
+
+2017 November 9th
+
+About save a file inside a Windows directory :
+FIRST : https://www.jimrich.sk/2015/01/18/environment-specialfolder-on-windows-linux-and-os-x/
+https://stackoverflow.com/questions/5211817/how-to-modify-a-file-in-program-files-with-win7-security-rights-to-a-directory
+https://msdn.microsoft.com/en-us/library/bb762181(v=VS.85).aspx
+https://stackoverflow.com/questions/6010472/copying-file-to-a-directoryc-or-cprogram-files-that-i-dont-have-permission?rq=1
+
+2017 November 8th
+
+Tested the splitter. Yet some bugs, but seems to work
+Now the tab window does no longer use a title, is no longer movable, and so on
+Better memory footprint, but we can do better
+Fixed the oldVideoFile / currentVideoFile stuff
+Improved the Close(), added a better cleanup
+We now can open close a video in runtime
+Video is now unloaded by default (lighter)
+The slider appears only when a video is loaded
+FIXME : yet some memory leaks ?
+
+2017 November 4th
+
+Added handball playground in a new tab (FDME GB)
+Started searching a layout + a color scheme
+
+FIXME : HighDPI seems to NOT work on Windows
+
+2017 November 3rd
+
+Added HighDPI rendering on Windows10 (TESTME ...)
+(code taken from : https://nlguillemot.wordpress.com/2016/12/11/high-dpi-rendering/ )
+Removed sdl_abort in main, replaced by sdl_application_abort, located in sdl_utils.cpp
+Continued code cleanup
+Improved the chronometer  XX min YY s for time > 1 min  (or YY s ZZ if tome is < 1min)
+TODO : do the same with the recorded value, or just keep displaying the seconds only ?
+
+2017 November 1st
+
+Implemented VideoReader class
+We can now open a video.
+Improved the font size for the chrono and the delay times (... and a bit the look)
+delay incrementation or next/previous slide  : only when the right tab is active
+Implemented the slideshow + open any video file
+Tested under Windows : OK for the installation, and the various tests.
+Using dynamic arrays (vector) for the slideshow, and it will very probably be the same for the slow-motion
+
+2017 October 25th
+
+Back to the customized Windows filepicker + hacky filters, since
+the official Windows one does not work.
+Finally reverted default to windowed mode, but bigger size (1400 x 780)
+Thus, the Windows user will think easely to switch to the max window size,
+and this will avoid the hidden filepicker issue (safer for the end user).
+
+
+2017 October 20th
+
+Fixed the ZeroMemory hack at build time (untested yet)
+Added windows native filedialog nfd_win.cpp in the .cpp files list (untested yet)
+Worked at the File Picker not raising on top issue. TBC
+
+2017 October 18th
+
+Improved the UI using the nice checkmarks OCornut did
+(see https://github.com/ocornut/imgui/issues/1378)
+Testing the zoom without success.
+Maybe we'll return to opencv ROI + space to add /remove the zoomed window.
+
+2017 October 14th
+
+Take some time to mprove NativeFileDialog on windows ?
+https://github.com/mlabbe/nativefiledialog/pull/33/commits/dedf95faa754b00a34c13bc4cf587e16d002b67c
+
+Now using InnoSetup (http://www.jrsoftware.org/) for the Windows packaging
+Install : ok, no problem
+ninstall : perfect. No more traces
+FIXME : where are stored the recorded movies? (and how to manage that ?)
+o
+Tested the Windows version
+FIXME, Windows : CTRL-O triggers a strange behavior. The current window is hidden, then the FilePicker appears
+FIXME, Linux : CTRL-O works nicely, but the filepicker opens on top only once ...
+++++ : on windows, we can change the camera in runtime (add a new one, reset one, use another one ...wow !)
+
+2017 October 12th
+
+Added menu entry to switch fullscreen /desktop mode.
+Fullscreen is now default
+Fixed Windows build warnings ( warning: ISO C++ forbids converting a string constant to ‘char*’ ) : a simple cast
+into char * was sufficient.
+
+Finaly implemented the FilePicker using native file dialogs :
+- gtk+3.0 on Linux : can open any video file
+- native on Windows (Win7+) // untested, but why should it not work ?
+
+FIXME : on Linux, the second time, the filepicker goes under the main window.
+
+No problem on Windows so far.
+Available file formats are limited by ffmpeg only.
+Currently : .avi, .mp4, .mpg, .ts, .MTS, .wmv + any other file (must be a video of course ...)
+Strange issue on Windows: every filter format must be duplicated in the list (??)
+
+
+2017 October 10th
+
+Working at FilePicker implementation (from Kiwi8 -my code- and OpenBoardView projects)
+
+Annotations :
+- create a vector of annotations
+- an annotation can be : a text (b_isText, bIsCurve, b_IsArrow, b_IsPoint ... )
+- access a given annotation, and set it as "active" clicking on it
+- transform it into a Bezier curve
+- be able to suppress it using DEL (or better : a right click + a contextual menu !)
+- remove the last annotation (if any) using BACKSPACE or right-click
+
+
+Testing show_camera. The principle is to enumerate all available cameras at launch, to avoid bad surprise in runtime.
+Works out of the box, and contains an interesting use of vector of cameras.
+The sample of code comes from : https://github.com/fabiopolimeni/opencv-samples (MIT license)
+
+
+2017 September 24th
+Now, it's possible to change the theme on the fly. Only traditional green and blue light are available at this time.
+
+2017 September 22nd
+Implemented activity / total time with the timer. Things are now well working.
+And we can choose between getTimeSinceTimerStarted() and getActivityTime().
+
+
+20th September 2017
+It's now possible to set/pause reset and record the time
+Implemented the Timer UI
+Implemented the Timer class
+
+15th September 2017
+
+Now reseting the delay to 1 s when switching the webcam
+or when toggling delayed -> not delayed display
+
+
+13rd September 2017
+
+""""""""""""""""""""""""""""""""""
+"     Released version 0.5.4     "
+"                                "
+""""""""""""""""""""""""""""""""""
+
+Build 69 tested on Windows 7, using several webcam (no integrated webcam though). The result is :
+- capturing 30 fps with any of them (but very light dependant. no idea how to improve)
+- every feature works, including recording
+- no more crashes, even when the wecam is not available
+
+Started another try to display inteligently the "Retard x second(s)" // read comments in main.cpp
+Continued code cleanup
+Added GTK+FLAGS to select GTK+2.0 or GTK+3.0, because libopencv_higui is linked to 2.0 :-/
+FIXME : rebuild OpenCV (linux only) without gtk+-2.0 support 
+Tested OpenCV crop image : causing general slowdown with the capture device. Means it needs some improvements
+=> kept as a build option
+
+11th September 2017
+
+Simplified the recording (duplicated code)
+We can now record a video using shortcut and/or checkbox
+Delayed display can now be started from both shortcut and checkbox
+Removed the "n" shortcut (new record)
+The delay can now be adjusted using RIGHT/UP LEFT/DOWN arrows as shortcuts 
+// FIXME add another similar shortcut for the slideshow plugin
+Added SDL_DROPFILE case in Input class
+
+8th September 2017
+
+Implemented resetWebcam(). Works well when everything is connected _before_ miniDart is launched
+
+FIXME :
+- crash when the webcam got disconnected + selected
+- changing the webcam needs more love, because the parameters may vary
+(mainly fps e.g. LifeCam3000 30fps / vs 24fps for Logitech C92x)
+Started the layouting with pause / delay / record. Seems to work, excepted recording, yet a bit buggy (but the rest is OK)
+Tested checkboxes, radioboxes and some nice ImGui features.
+
+5th September 2017
+
+Upgraded ImGui version to 1.52 WIP : testing the new color palette !
+Continued code cleanup
+Prefer change for PressedOnRelease behavior with ImGui API
+See : https://github.com/ocornut/imgui/pull/1113/commits/8df58e2cfde40c23556966a90730182f5245327a
+
+28th August 2017
+
+Fixed the cv:VideoWriter.release() issue.
+FIXME : CaptureDev class seems to work ... but not in fact: initialization issue (must use the same thread ?)
+Implemented CaptureDev. Remains the initialization problem
+Forced to keep the main part of CaptureDev::Init() (probably a pending pointer issue)
+Added RangeSlider feature for the slideshow, 
+including an given area of frames (Rmin, Rmax)to be shown for the slow-motion feature
+From left to right, it gives : Nmin = 1 (always) ; Rmin == range min ; Rmax == range max ; Nmax = size of the video
+Tested the prev / pause / stop / play /next + movie icons. Needs some improvement
+Fixed lot of leaks introduced with the icons. Seems to be more quiet now.
+
+23rd August 2017
+
+Tested the new color picker (wow !!)
+delay appear continuously, to advise the user there is one delay running.
+Testing ImGUI 1.51 WIP.
+Fixed the last apparent issue : using the wrong font (ProggyClean is uggly btw)
+
+22th August 2017
+
+OpenGL : removed SDL_GL_SetContext Core + Profile per see. Seems to be faster (testme more ...)
+Continued code cleanup
+
+20th August 2017
+
+Continued code cleanup.
+Started to check licenses. Think to copy paste ImGui license.
+FIXED the slow framerate on Windows. got 30 fps with ALL webcams now ! (aaaaaaaaaahhhhhhhh......)
+Drag and drop works everywhere, with slow motion and slideshow.
+TODO : add the zoom, already working on both OSs.
+
+
+19th August 2017
+
+Drag and drop works on Linux, but builds on all OSs. The magic is "case SDL_DROPFILE" event.type !
+slideshow works on Windows
+slow-motion works on Windows too. TODO : implement the drag and drop, to play a clip !
+
+18th August 2017
+
+
+TODO : Windows packaging for a full installation
+Continued code cleanup + simplified the makefile
+started "File open" using native file dialogs
+fixed the nativefiledialogs build on Linux ! (OK since a while on Windows though)
+fixed slideshow build for Windows. needs improvements. use cvui ?
+
+17th August 2017
+
+fixed slow-motion : it is now possible to open a video on Windows, using slow-motion filter.
+Use VideoCapture video(filename, cv::CAP_FFMPEG) + add opencv_ffmpeg310.dll provided in the bundle (root dir) dit the trick.
+
+16th August 2017
+
+Simplified main.cpp, prepared more code factorization
+Tested LifeCam 3000 from Microsoft (35 € only !!)
+Tested on Linux only : 720p / 30fps (capture, and record ok at 24 fps)
+Optical less precise than Logitech, but gives good results though.
+FIXME : test on Windows
+Did some code cleanup (indentation, simplification)
+
+15th August 2017
+
+Continued code simplification + factorization
+Created sdl_utils.cpp / sdl_utils.h (getInfo(), sdl_abort() )
+
+14th August 2017
+
+Modified the sources tree:
+- s/sources/src/
+- added src/3rdparty, now containing imgui, tinyfiledialogs, gl3w and so on
+- modified the Makefile accordingly. Now building ok
+
+Fixed all Linux warnings
+- imgui_tabs.h : /*static*/ _drawPartialRect  // (never used as static)
+
+- Intialization value out of bounds (SDL_NUM_SCANCODES == 512, MICE_BUTTONS_NUMBER == 8):
+  mbIsInputAKey[SDL_NUM_SCANCODES-1] = {0};
+  mbIsInputMiceButton[MICE_BUTTONS_NUMBER-1] = {0};
+
+Fixed several Windows compilation warnings :
+- gl3w.c:29 : reinterpret_cast<void *>(wglGetProAddress(proc))
+- gl3w.c:31 : same issue
+- tinyfiledialogs.c:668: s/char */const char */    TESTME IN RUNTIME
+- tinyfiledialogs.c:726: s/wchar_t */const wchar_t */  TESTME IN RUNTIME
+
+Modified the Makefile : -D__Linux was used by default whith !NATIVE_BUILD  (??)
+FIXME : maybe fixed a silly bug on Windows (cannot test until back at home, or using a machine under Windows)
+
+Found the bgfx Color Picker. Needs some learning before to test it, but that's a good start.
+Continued to search _why_oh_why_ the frame rate is slow on Windows.
+
+7th August 2017
+
+Found an interesting other solution, piping ffmpeg AND using opencv_ffmpeg_64.dll (luckily, I got it built ...)
+Found lot of links saying cp_dshow is BROKEN  ( + opencv issues confirming it's true :-/ )
+Worked at (yet) Windows cap_dshow still providing webcam images at 15 fps (instead of 30)
+Fixed the 2 warnings when using ImGui::Image, using reinterpret_cast< void *> () instead of (void *):
+e.g. : 
+warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+               ImGui::Image((void *)backgroundTexId, ImVec2(640, 360), ImVec2(0,0), ImVec2(1,1),
+
+23rd July 2017
+
+Updated the roadmap
+Worked at :
+- open any vidéo (images+sound) : dranger ffmpeg examples (part 1)
+- WaitKeyEx (OpenCV > 3.1.x). Basicaly returns  (code & 0xFF) => already using it ;-)
+
+
+22nd July 2017
+
+Started to think how to insert the slideshow _and_ the slow-motion : probably in a tab
+TODO : replace all OpenCV highgui calls / callbacks, and turn them into ImGui thing
+
+Added tiny file dialogs (open/save).
+Compiles fine, for both Linux and Windows, but not tested yet (too late)
+
+Tested opencv highgui _over_ SDL2 + OpenGL : seems to work with some hacks, but there is one last issue:
+the OpenCV Window goes _under_ the main window :-/ (no idea how to fix that).
+
+Same issue for cvui, who needs a waitKey() to work (else, events are not captured).
+Fixed the tabs background issue : fill it before to draw everything. Proposed a pull request ...
+
+
+20th July 2017
+
+Fixed the bug with the tabs. Fixme : verify there is no overload caused by some redraw
+Added some .png in the tree like play, pause, rewind, stop and so on.
+Rendering is ok with ImGui 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+UPDATE : what could be a good webcams list ?
+
+1st) C920 Logitech :
+very good (2016 awarded.
+Using 720p @30fps read/write on Linux, 15fps/20fps on Windows (why??))
+
+2nd) C922 Logitech : 
+very good (720p @60 fps possible.
+Using 720p @30fps read/write on Linux without any issue, ... and only 15fps/20fps on Windows (why??))
+
+3rd) Microsoft Lifecam  // not tested
+
+N.B. : on Windows, the issue - captured video / webcam image not the same speed - 
+comes from Logitech for the C9xx : disable "Right Light" and there is a jump at 30 fps,
+without explanation, nor good reason. How to disable that "feature" btw ?
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+In progress : Enable / Disable / select a webcam, or another one  // display both ?
+Started the main window implementation :
+either use ImGui window splitter, or several windows, all with fixed dimensions
+
+TO BE TESTED : main window splitter, e.g.:
+ __________          __________         __________
+|___A______|        |___A______|       |          |
+|      |   |        |      |   |       |Fullscreen|
+|  B <-|->D|  OR    | B  <-|-> |   OR  | (video   |  + move the mouse, will
+|______|___|        |______| D |       |   only)  |    trigger a menu ?
+|___C______|        |__C___|___|       |__________|
+
+
+A : ImGui menu bar // to be disabled in fullscreen
+
+B : several tabs :
+- Delay : Video from Webcam : ImGui rendering (using OpenGL)
+- Analysis : Videos from a given directory ( right click -> open directory)
+- Credits  : 
+- Help : contains all information, as Users Guide
+
+C : current videos in a given (and selectable) directory
+
+D : for a given tab, display usefull parameters e.g.:
+- lot of buttons,
+- sliders,
+- checkboxes,
+- strings, values (float and so on), 
+- color picker,
+- annotations
+- timer (overlay) 
+
+Add : contextual menu
+
+- learning libav examples, to capture both images and sound
+
+
+
+19th July 2017
+
+Implemented CaptureDev class (90% done)
+TODO : replace the existing code (curretnly in main)
+
+""""""""""""""""""""""""""""""""""
+"     Released version 0.5.1     "
+"                                "
+""""""""""""""""""""""""""""""""""
+
+Fixed the fps consistency between recording and writing frames in a video : 
+- 30 fps ON Linux, but 25 seems to be a good record/write compromise
+- Only 15 fps (rec.) / 20 FPS (wrting) on Windows for the moment 
+// TODO : find how to disable "Right Light" (magical from Logitech ...), and we'll see 30 fps on Windows too ...
+Started 0.5.2_code_factorization_continued
+Fixed the input initialization for Mouse buttons ( s/SDL_NUM_SCANCODES/MICE_BUTTONS_NUMBER/)
+Let's stick with c++11
+Simplified the Makefile for the cross-compilation (directly using opencv flags)
+
+29th May 2017
+
+Searching why the frame rate is so slow on Windows (15 fps), while we got a correct 30 fps on Linux
+Microsoft documentation abut input devices is bullshit : 
+- a loooot of pages (of jerk ) to read,
+- complicated,
+- you must guess a lot of things. Intersting information is propably fee dependant.
+
+cap.set(CV_CAP_PROP_FOURCC ... ) gives on Linux :
+CV_CAP_PROP_FOURCC returned by the webcam : -1
+trying to set :   cap.set(CV_CAP_PROP_FOURCC,CV_FOURCC('M','J','P','G'));
+VIDEOIO ERROR: V4L: Property <unknown property string>(6) not supported by device
+640
+480
+30
+VIDEOIO ERROR: V4L2: Unable to get property Exposure(9963793) - Invalid argument
+
+
+28th May 2017
+
+Installed NSIS (Windows installer) with apt-get // 2.x only ?
+Started reading NSIS documentation
+
+
+""""""""""""""""""""""""""""""""""
+"     Released version 0.5.0     "
+"         + NEW ROADMAP          "
+""""""""""""""""""""""""""""""""""
+
+
+26th May 2017
+
+NEW ROADMAP :
+
+    //                  (sort of) ROADMAP
+    //
+    // MAJOR FIXME : be able to separate, and control separately :
+    // 0.3   [DONE]                               1.  SDL events
+    // 0.4   [DONE]                               2.  OpenCV scene : Direct or Delayed frames from webcam
+    // 0.4.1 [DONE]                              19.  Provide a proof of concept, mixing SDL2, ImGui, OpenCV and OpenGL 3.x
+    // 0.5   [DONE cross compilation, mingw32]    7.  portability : provide a Windows version + the Linux one
+    // 0.5.1 [started]                           22.  Code factorization : rewrite the event loop + input handling (urgent)
+    // 0.5.2 [DONE]                              23.  Code factorization : write a CaptureDev class (urgent)
+    // 0.5.3 [DONE, to be added later]           12.  Integrate new effects like slow motion
+    // 0.5.4 [DONE]                              13   Slideshow : load a movie, and move image by image
+    // 0.6   [DONE]                               8.  Organize the UI (TABS, in a window containing several scenes in same time)
+
+    // 0.6.1 [DONE, draft for the moment]         3.  stack of annotations
+    // 0.6.2 [DONE]                              18.  connect the UI to the user's actions
+    // 0.6.3 [DONE works very well]              24.  arrows or curved lines using (cubic) splines
+    // 0.6   [DONE]                               9.  ImGui menus, including context menues.
+    // 0.7   [STARTED, will be multi windows]     4.  Fixed frames, where we'll annotate, and saves as vidéos with annotations
+    // 0.7   [in progress]                        5.  Geometry (homography, warp) + rotation
+    // 0.7   [STARTED]                           25.  Organize the view to implement an annotations Canvas for single frame
+    // 0.7   [STARTED]                           26.  finalize the Canvas annotations for single frame
+    // 0.7   [STARTED]                           27.  Create an annotated video of a given length, for a single frame
+    // 0.8   [not started]                       15.  implement view with images (first frame)
+    // 0.8   [STARTED delay+text work]           28.  Insert annotations in a vidéo  // ARROWS
+    // 0.8   [STARTED, will be tinyxml2]         14.  implement preferences (tinyxml ?)
+    // 0.9   [not started]                        6.  Multiple windows (one contains the webcam output + another with GK follow up)
+    // 0.9.1 [not started]                       16   Write help
+    // 0.9.2 [IMPORTANT, not started]            17   Localize in english, french, and prepare other locales
+    // 1.0beta [DONE Win7+ missing MacOS, Linux] 11.  Packaging on every OS
+    // 1.0                                       10.  Tests, API stabilization
+    // (new devel cycle)
+    // 1.2   [started on Mac OS X 10.6.8]        7. portability : provide a Mac OS X version
+    //       (remains: make Carbon/Cocoa build with OpenCV)
+    // 1.x                                       19. OpenCV blobs (multi)detection for tracking, like corners or detected contours and so on
+    // 1.x [in progress]                         20. OpenGL scene => later, when using augmented reality
+    // (new devel cycle)
+    // 3.x [Started]                                      13. Collect datas and analyze moves, action areas and so on
+    // 3.0 (stable)    once stabilized
+    // Later
+    //                                           14. Add sound suport ? (and synchronize ...)
+    // [started]                                 21. In parallel : implement multi-threading, mutexes and so on to improve the robustness
+
+
+TODO LIST : reordered priorities, now releasing 0.5
+[Windows]  Fixed the VideoWriter issue : the good idea was to use cap.get(CV_CAP_PROP_FOURCC)
+[Windows] : workaround with the broken SDL_Renderer(). Now using SDL_GL_SwapWindow();
+The webcam view is now integrated into a tab (using ImGui::Image())
+Fixed lot of Windows specific little broken things.
+Released build 17 for Windows teting purpose. Waiting for feedback.
+
+25th May 2017
+
+Added NATIVE_BUILD flags : means building on Linux, and for Linux
+Cross compilation wors on Windows, but got only 15 fps (by night, will retry with the sun)
+Fixed the OpenGL 3.3 + FBO + ImGui + SDL2 (no renderer), cross compiled. Even a shortcut works on Windows
+
+Cross compiled ImGui + SDL2 + OpenGL 3.3 + tested on Linux using wine64
+Tested ImGui on Windows (SDL2 + OpenGL 3.3 verified) // + created the script to build it repeatably
+
+Added the ALT + F4 shortcut => works well
+Added -DHAVE_VIDEOINPUT + -DHAVE_DHOW, who helps a lot to make the webcam work on Windows
+Fixed the /dev/video$i value on Windows (0 is for the first webcam)
+FIXME : implement a Capture class (urgent)
+
+miniDart (FBO + OpenGL 3.3, SDL2, no renderer) :
+ISSUE#1 : ImGui not working at 1280 x 720 / 30 fps, using the SDL2 renderer (cross compiled)
+ISSUE#2 : crash when trying to display any delay value (framecount assertion ?)
+
+23rd May 2017
+
+Anybody can lend me ... a Windows ?
+The Makefile seems to be OK : remains one -fpermissive to remove
+Launched miniDart.exe :-)  (but we see nothing, I realy need Windows 7+ ...)
+Fixed the libturbojpeg (was not static)
+FIXME : potential crash with dlopen, because of posix issue with dlfcn
+Fixed OpenCV-3.1.0 cross compilation script (added CMAKE_INSTALL_PREFIX)
+DONE : cross compiled libsdl2-ttf, libsdl2-gfx, libsdl2-image, libsdl2-mixer
+DONE : cross-compiled OpenCV-3.1.0. Now : automatic build is OK.
+Windows cross-compilation started. Remains : linking issues (libtiff and some other missing)
+Makefile modified, using TARGET flag to differentiate both builds.
+
+20th May 2017
+
+Started cross compilation :
+
+Added TARGET = WINDOWS : commented out => Windows build, else host build
+
+TODO : libopencv  // COMPILE ME
+TODO : libimgui
+DONE : libGLEW  // see the script in glew-2.0.0 sources
+DONE : libopenGL  => provided with  mingw32 (!)
+TODO : libsdl2-ttf, libsdl2-gfx, libsdl2-image, libsdl2-mixer
+ffmpeg  : done
+libsdl2 : done
+
+16th May 2017
+
+TODO : improve the menu : Application -> Quit + shortcuts, File, (other items) and so on
+Connected quit (ALT + F4 ) in the menubar. Works well
+Added last pull request : save and restore sampler in GL 3 examples
+=> no change when building with -DUSE_GL3 flag (yet no ImGui at all)
+(https://github.com/ocornut/imgui/pull/1145)
+
+15th May 2017
+Started cross-compilation investigations.
+Installed g++-mingw-w64-x86-64, gcc-mingw-w64-x86-64, libz-mingw-w64, libz-mingw-w64-dev, gdb-mingw-w64-target
+
+13th May 2017
+
+Tested NodeEditor
+Tested borderless SDL Windows, using the simple : 
+void SDL_SetWindowBordered(SDL_Window* window,
+                           SDL_bool    bordered)
+=> Seems to work very well. NEEDS MORE TESTING
+Tested SDL_Movie, found : https://www.gamedev.net/topic/348340-play-video-files-in-sdl/
+Seems to work, but maybe return to libvlc / vlccore one day.
+
+12th May 2017
+
+Found a new nice style color scheme (from codecat : https://github.com/ocornut/imgui/issues/1086 )
+Tested splines from https://github.com/ocornut/imgui/issues/786 // from r-lyeh
+TODO : learn all splines possibilities, and remove grid + window + be able to draw only_in the image
+
+11th May 2017
+
+Tested scherlock (multi-thread library) from : https://github.com/vmlaker/sherlock-cpp
+Added ImGui::GetStyle() in main. TODO : will become Application::GetStyle();
+Fixed some warnings (mostly imtabs)
+
+
+10th May 2017
+
+created miniDart_features.txt
++ added miniDart_features.txt in the devel archive
+updated the TODO LIST
+
+
+9th May 2017
+
+Implemented Imgui::Image() inside the tabs + mini vertical sliders. WORKS VERY WELL !!
+
+
+8th May 2017
+
+Spent a long time on the slideshow : display image by image in a given selection (e.g. a sequence, a given video)
+Implemented : 
+- memory fooprint reduction
+- code factoring and cleanup
+- increase/decrease resolution in runtime.
+
+Version 1 :
+PROS :  secure (no crash, safe even with crappy videos)
+CONS :  but memory overload : 1,1 GB of ram for a 10MB video (??)
+Version 2 :
+PROS :  the new window opens immediately, no delay, 60MB of RAM for a 10MB video => correct
+        8% with 720p image, until 60% => correct
+CONS :  possible crash when video contains bad images, not safe : the bad images are NOT detected (why oh why ...)
+
+
+- performance issue : workaround, using b_clicked to change the priorities // IMPROVE ME
+
+
+7th May 2017
+
+Continued the code factorization processe
+Played with glBlitFramebuffer (very close to glViewport) on the FBO version 
+See : https://www.khronos.org/registry/OpenGL-Refpages/es3.0/html/glBlitFramebuffer.xhtml
+
+6th May 2017
+
+Tested speed_test : Logitech C920 is able to make around 33 fps without any problem.
+
+FIXME : Investigate
+
+Tested threaded capture. Let's try to enlight the process (60% of 1 core -> too much).
+The bottleneck seems to stand in the capture process, somewhere like cap >> frame or frame2 = frame.
+See : Recent_2017_May/Threads
+
+4th May 2017
+
+Improved the tabs, modified colors + hacked text position issue // FIXME => do better
+TODO : choose a neat color scheme for the tabs + find how to remove those ghosts + fill the window + render an image in the middle
+TODO : implement states machine. Idea to be verified : states based on the tabs ?
+TODO : re-write CaptureDevice, and Events Loop
+
+3rd May 2017
+
+Completed SelectROI : now we can select an area, change the color, on a video or using the webcam
+Tested CVUI 2.0 : wow, very intersting, including image-buttons !!
+
+
+2nd May 2017
+
+Added some licenses in the archive (imgui tabs)
+Learning ImGui code, tested lot of horrors ( named "ImGui addons" )
+Continued the factorization work. Started with the update() problem
+Added tabs from Scott Mudge. Works well.
+FIXME : Now, how to add an image / a texture inside ?
+
+
+1st May 2017
+
+ImGUI References (patches and usefull changes) :
+Tabs :https://github.com/ocornut/imgui/issues/1083
+Menu item should be selected on Release() : https://github.com/ocornut/imgui/pull/1113/commits/8df58e2cfde40c23556966a90730182f5245327a
+Add configurable color for button text in hovered and active states: https://github.com/ocornut/imgui/pull/1055
+
+Code factorization :
+- getInfo now belongs to application.cpp ( will become Application::getInfo() )
+- s/#include <helpers.h> /#include <application.hpp>/ in main.cpp
+
+Improved input.cpp : using c++11 way now for array intialization
+
+TODO LIST for 0.5 :
+- EXPLORE ImGUI features (and test code)
+- start code factorization : handle_Events / update / render
+- write new classes, and keep the code factorization on
+- learn ffmpeg and libav : how to open a movie, and keep the soundtrack synchronously ?
+- show and discuss new ideas with other people
+- search for more load enlighment for the proc :
+  Currently 60% of 1 core + 93MB of RAM just for the display (720p, 30fps + ImGUI + using SDL_Renderer)
+  do we need to decrease the preview resolution ? Other tracks : use another thread, or improve the game loop (rendering issue ?)
+- start playing with cross compilation : Windows and Linux only. Sorry Apple, but I don't want to pay for develop.
+- rewrite ROI_selector
+- add first frame preview
+- test opening / saving / documents
+- start annotations tests : create annotations, pen, insert text, rectangle, arrow 
+- improve the zoom
+- improve the UI (reuse/copy OpenBoardView implementation)
+- test tab pages
+
+30th April 2017
+
+""""""""""""""""""""""""""""""""""
+"     Released version 0.4.1     "
+""""""""""""""""""""""""""""""""""
+
+Improved the Makefile :
+- simplified includes ;
+- added separated locations for .cpp and .c files
+- using $(shell some_command) // only Linux or Mac OS X
+- using  ifeq ... endif make directives
+- fixed subtles linking issues
+
+Included ImguiTabs code : compiles fine, but stands as untested
+Created zoom (separately) : select a region of interest (ROI) in the image, and the selection will appear in a separated and resizable window
+Close to the final UI colors
+
+TODO : add another callback (done) inside the ROI window, to allow zoomed region centering/moving directly (todo)
+FIXME : reimplement ROI_selector class, because removed in OpenCV 3.2.0
+
+28th April
+
+Augmented Reality : tested OpenGL_cube_OpenCV : works fine, but needs glut to be replaced // FIXME
+Played a bit with glm, and replaced glFrustrum is some example // cross compilation OK
+Created SelectROI. // cross compilation OK
+Fixed memory leaks:
+- with the FBO glDelete()
+- and the cv::Mat not released.
+- Tested several times ~1 hour : not significative leak observed (considered as fixed, let's wait for other issues)
+
+25th April 2017
+
+Made big improvements in tracking area : see Recent_2017_April/Tracking directory for further ideas // cross compilation OK
+Added USE_GL3 flag to allow the build using OpenGL 3.3 Imgui OpenGL3 implementation (for testing purpose)
+
+17th April 2017
+
+Fixed SDL_Renderer + ImGUI rendering issue : using OpenGL 3.0 (no way for more currently :-/ )  // TO BE VERIFIED
+Fixed OpenGL Framebuffer Objects + Imgui : using OpenGL 3.3 ( pixel shaders 330 available)  // cross compilation OK
+Added DroidSans true type font  // cross compilation OK
+Created slow-motion (separately)  // cross compilation OK
+Tested SDL2 FireWorks (including OpenGL FBO) // cross compilation OK
+Tested NativeFileDialog (Linux=GTK+3, Windows=IFileDialog and +, MacOSX=Cocoa)  // cross compilation OK
+
+1st April
+
+Tested OpenBoardView : lot of interesting code inside, like :
+- ImGUI implementation, and similar need like miniDart
+- UI implementation
+- UTF-8 implementation
+- file formats implementation
+- glad use
+- sqlite use
+- tinyxml : user preferences
+- tiny
+Tested Soloud + SndPeek Imgui : both work fine.
+Soloud is voice simulation, and a lot of nice sound effects using fast fourier transform (aka FFT)
+while SndPeek is FFT with sound, including a possible entry selection (e.g. sound from the webcam)
+=> signal computation possible
+Note:  SndPeek source code is no longer available, but I got everything under free license.
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+(lot of time -> logs to come) 
+
+FIXME : make ImGUI work WITH SDL2 (SDL_Renderer solution prefered)
+
+Discovered ImGUI. Worth a try ...
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+6th October 2016
+
+The webcam images are now drawn with a one pixel shadow
+Can render several rectangles, and other areas (keep the right order is the challenge)
+
+Menu : learning sdl2-space-shooter from Brandon To, maybe I'll be able to re-use the state machine
+he implemented.
+
+Tested :
+- nanogui (OpenGL 3.x)
+- nanovg (C, OpenGL 2 or 3.x)
+- nanosvg (not a gui, but interesting)
+- gwork (look very interesting)
+- milligui (looks interesting, but not completed)
+- nanogui-sdl (looks very good, not yet understdoo how to bind it with an SDL application)
+- nngui (OpenGL 3.x)
+
+Current prefered :
+1 nanogui-sdl // maybe complicated, and to be tested (some people reported its not that fast)
+2.nanovg (but C and OpenGL 3.x oriented)
+3 kiwi // looks very simple to use
+3 kiss_sdl // light, and easy
+4 gwork
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+5th October 2016
+
+upgraded SDL2 version to 2.0.5 from github (will be out soon)
+tested :
+- guichan
+- Kiwi (long tests, very intersting and simple to use)
+- imgui (very good, needs more investigations)
+- cegui : too big, and fat for what we need
+- neogfx : does not even build ...
+- Gwork : interesting, looks complete, but no idea on how to use it
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+4th October 2016
+
+Released 0.3.4 version
+
+Todo : finalize capturedev class, replace the current code + use the simplified and more efficient 
+new event loop in main.
+
+Current (started) :
+- capturedev class implementation
+- draw a line
+- think to the application look ! (and what is expected)
+
+Everything compiles fine // SDL2, Opencv-3.1, Linux-4.2.0 x86_64, Debian
+
+Untested but implemented (as dead code for the moment) all the code below :
+Implemented a new event loop : created input.hpp, input.cpp (from OpenClassRoom SDL2 events example)
+Added new classes :
+1. common.hpp, common.cpp, to provide renderer visibility
+2. capturedev.hpp, capturedev.cpp // TODO : implement all methods
+Started Application::Init(); 
+Started application.cpp, capturedev.cpp and objects.cpp implementation
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+3rd October 2016
+
+Released version 0.3.3
+Replaced some images in the nanogui-sdl widget, and seems to work well
+Did some code cleanup
+The captured frames can now be drawn in a given rectangle inside the window (using RenderCopyEx)
+Removed the draw(renderer, frame) doing nothing serious  :-/ (why ?)
+
+Created : 
+- application.hpp
+- capturedev.hpp
+- drawing_context.hpp
+- objects.hpp
+
+Learned MatrixModelView mathematical model from Song Ho Ahn 
+(explaining about OpenGL transformation from ortho to eye coordinates system)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+2nd October 2016
+
+Tested breakout game => will use the patterns, extremely well written
+Tested texture streaming example from Lazy Foo' Productions
+Tested OpenGL 3.1 in SDL2 (testOpenGL3.c)
+Created objects.hpp
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+1st October
+
+Released version 0.3.1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+28th -> 30th september
+
+Started to work on a contextual menu, at least find several ideas for the future implementation.
+Implemented CTRL+W (close window event) in multiplewindows example from Lazy Foo' Productions
+Tested nanogui-sdl, kiss_sdl, agar-1.5 and some other SDL GUIs
+Delay value incrementation/decrementation can now work using shortcuts (up/down arrows).
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+24th -> 27th september 2016
+
+Tested and played a bit with SDL_Timer example from Lazy Foo' Productions
+Tested text input example from Lazy Foo' Productions
+Tested Geometry rendering example from Lazy Foo' Productions
+First delay, using queue. Tested working well until 100s (no sound)
+Tested OpenGL in SDL2 window
+Tested multiple windows managing (playing with focus)
+Tested ViewPort implementation example from Lazy Foo' Productions
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+23rd september 2016
+
+Tested OpenGL in Opencv scene (OpenGL_OpenCV.cpp)
+Fixed flickering issue, when rendering more than once in the loop.
+Set label works, with correct rendering.
+OpenCV + recording + queue working 
+
+Long discussion (by mail) with Nicolas Tournadour, about the expected behaviour of the software, and
+how we could use it with young people (what works, what is important, and what is secondary).
+Thanks to him for all the good ideas he suggested, like the "delay workout", all the annotations suggestions, 
+or even the SlowMotion feature (filter should I say). Will investigate regularly and ask people all around.
+
+What could be a good webcams list ?
+1st C920 Logitech : very good (2016 awarded)
+2nd (awarded) Logitech HD C615 // not tested
+3rd  Microsoft Lifecam  // not tested
+Other name coming often : Go pro (which model ?) // not tested, but intersting, because of the wifi (no wire!)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+22nd september 2016
+
+No more using OpenCV window, nor sliders. Now, only SDL2 rendering is used + shortcuts
+Created drawing_context.hpp, surface.hpp, menu.hpp, surface.cpp,
+drawing_context.cpp, menu.c (using linked lists)
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+21st september 2016
+
+First recording implementation.
+Code split : inc (.h and .hpp), sources will contain all .cpp files
+Created: colors.cpp, helpers.cpp, main.cpp and setlabel.cpp (+ matching .h)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+20th september 2016
+
+Added more events
+Implemented fullscreen mode, paused mode, draw_recording 
+and some other in the event loop (fake events)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+19th september 2016
+
+Added modifiers in the event loop (KMOD*)
+Implemented recording, and delay booleans, not yet working.
+Worked with sdl2 keycodes catching
+Tested circular buffer, to create the delay. Just buggy
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+18th september 2016
+
+0.1 First working version, using Opencv-3.1 + SDL2
+No delay, no sound either, but some events work.
+Several modes are there
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+16th september 2016
+
+Factorized delay source code, to use it as a library
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+15th september 2016
+
+Implemented draw.cpp : allows to draw a rectangle with the mouse, and select its color (Opencv API only)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+12nd september 2016
+
+WebcamGL : mixing Opencv and OpenGL + GLEW/GLFW + playing with several OpenGL effects 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+10th september 2016
+
+Tested (multi-)tracking, using AKAze algorithm.
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+8th september 2016
+
+Analyzed motion-tracking source code, and tested it longly.
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+7th september
+
+Tested camshift video: select a blob, and track it
+Tested geometry : in a given perspective, select 4 corners of a rectangle,
+and perform the vertical projection
+Played a bit with trakcing motion, and several associated algorithms, like corners.
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+6th september
+
+Tested blob detector
+Compare rectangles
+Draw one rectangle
+Squares detection
+Detect rectangles
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+4th september 2016
+
+Tested imread and colors with opencv API
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+3rd september 2016
+
+Added more parameters (advanced parameters)
+Tested the first Opencv-3.1 only implementation (nothing else)
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+1st september 2016
+
+Tested auto-colour filter.: used rectangle selected and some other interesting methods/algos.
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+15th August 2016
+
+Spent more than a week learning ffmpeg options, and testing a bunch of them, including searching
+on the web _why_oh_why_ some didn't work. After a long week searching ... :
+
+- I finalized the script : now works fine using ffmpeg, vlc and delay.
+- the sound is now synchronized !
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+2nd August 2016 :
+
+no sound, but just frames.
+first try with a shell script named "decalage.sh", and using the excellent delay C program (GPL), written by Romain Vimont.
+
+1st August 2016
+
+I found delay git repository, written by from Romain Vimont, and started to play with it + ffmpeg.
+
