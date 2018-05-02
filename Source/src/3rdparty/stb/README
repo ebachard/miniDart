@@ -1,0 +1,6 @@
+All the files in this directory come in fact from ImGui, and include the changes Omar Cornut did,
+and I found it more easy to separate them from other imgui_*. They all are used in miniDart without any modification,
+just to fit what ImGui expects (miniDart deeply relies on Dear Imgui for the GUI). All the files mentionned above are
+licensed both under Public Domain License, and MIT license (please verify reading them)
+
+Eric Bachard May 2nd 2018
