@@ -35,31 +35,31 @@ class VideoReader
         VideoReader();
         // Dtor
         ~VideoReader();
-        bool initVideo();
+        bool             initVideo();
         cv::VideoCapture maVideoReader;
-        void setPos();
-        unsigned int getPos();
-        int getWidth();
-        int getHeight();
-        int getMaxFrame();
-        bool setMaxFrame(int);
-        int getFrameCount();
-        void setFile(char *);
+        void             setPos();
+        unsigned int     getPos();
+        int              getWidth();
+        int              getHeight();
+        int              getMaxFrame();
+        bool             setMaxFrame(int);
+        int              getFrameCount();
+        void             setFile(char *);
         //int prepare();
-        void resetFrames();
-        void Close();
-        bool newVideoLoaded;
-        std::vector<cv::Mat > frames;
-        char * getCurrentVideoFile();
-        char * getOldVideoFile();
+        void             resetFrames();
+        void             Close();
+        bool             newVideoLoaded;
+        std::vector<cv::Mat >  frames;
+        char *           getCurrentVideoFile();
+        char *           getOldVideoFile();
     private:
-        unsigned int pos;
-        char * currentVideoFile;
-        char * oldVideoFile;
-        int frameCount;
-        int frameWidth;
-        int frameHeight;
-        int maxFrame;
+        unsigned int     pos;
+        char *           currentVideoFile;
+        char *           oldVideoFile;
+        int              frameCount;
+        int              frameWidth;
+        int              frameHeight;
+        int              maxFrame;
 };
 
 

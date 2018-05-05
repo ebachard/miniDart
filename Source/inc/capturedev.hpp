@@ -18,10 +18,6 @@
 
 #define FOURCC(a,b,c,d) ( (unsigned short int) (((d)<<24) | ((c)<<16) | ((b)<<8) | (a)) )
 
-/* class   */
-
-using namespace std;
-
 //class CaptureDev : public Common
 class CaptureDev
 {
