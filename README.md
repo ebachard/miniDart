@@ -2,7 +2,7 @@
 
 **VERSION EN FRANCAIS** (english version follows)
 
-** Version NON maintenue. Le développement continue sur :  https://framagit.org/ericb/miniDart **
+**Version NON maintenue. Le développement continue sur :  https://framagit.org/ericb/miniDart **
 
 # miniDart (version actuelle : 0.7.0)
 Logiciel d'analyse vidéo pour coachs de sports collectifs (handball, mais pas seulement)
