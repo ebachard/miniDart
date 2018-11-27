@@ -4,7 +4,7 @@
 
 **Version NON maintenue. Le développement continue sur :  https://framagit.org/ericb/miniDart**
 
-# miniDart (version actuelle : 0.8.3 (devel is 0.9.0) )
+# miniDart (version actuelle : 0.8.6 (devel is 0.9.0) )
 Logiciel d'analyse vidéo pour coachs de sports collectifs (handball, mais pas seulement)
 
 Ceci est une version de démonstration du logiciel **miniDart**. Elle n'est pas complète, et comporte probablement quelques bugs. Une partie des fonctionnalités est encore manquante, et devrait être implémentée d'ici le printemps 2018.
@@ -20,7 +20,7 @@ Deux versions sont disponibles au téléchargement. **L'une pour Windows 7 (64 b
 La version en téléchargement a besoin de Windows 7 ou plus + pour fonctionner, et vous est fournie avec un installeur. La désinstallation a aussi été testée, et supprime toute trace du logiciel. **Si vous l'installez**, notez que vous utilisez ce logiciel à vos risques et périls, et n'oubliez pas qu'il est impératif de faire des sauvegardes de vos document AVANT de l'utiliser.
 
 
-**Pour le téléchargement, cliquer ici : https://github.com/ebachard/miniDart/tree/master/testing_version**
+**Pour le téléchargement, cliquer ici : https://framagit.org/ericb/miniDart/tree/master/testing_version**
 
 Pré-requis
 
@@ -118,7 +118,7 @@ Ce logiciel est écrit sous Linux, et cross-compilé pour fonctionner sous Windo
 
 **ENGLISH VERSION**
 
-#miniDart (current version: 0.8.3 on https://framagit.org/ericb/miniDart )
+#miniDart (current version: 0.8.6 on https://framagit.org/ericb/miniDart )
 Video analysis software for team sports coaches (handball, but not only)
 
 This is a demo version of the **miniDart** software. It is not complete, and probably has some bugs. Some of the features are still missing, and should be implemented by spring 2018.
@@ -133,7 +133,7 @@ Two versions are available for download. One for **Windows 7 (64 bits) or later*
 
 The download version needs Windows 7 or more + to work, and comes with an installer. The uninstallation has also been tested, and removes all traces of the software. If you install it , note that you use this software at your own risk, and remember that it is imperative to make backups of your documents BEFORE using it.
 
-**For download, click here: https://github.com/ebachard/miniDart/tree/master/testing_version**
+**For download, click here: https://framagit.org/ericb/miniDart/tree/master/testing_version**
 
 Prerequisites
 
