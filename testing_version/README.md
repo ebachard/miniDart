@@ -1,4 +1,8 @@
-La version actuellement en test est la **0.7.0**
+
+**Version NON maintenue. Le développement continue sur :  https://framagit.org/ericb/miniDart**
+
+
+La version actuellement en test est la **0.8.9a**
 
 N.B. : merci de me contacter directement en cas de problème avec les instructions.
 
@@ -7,7 +11,7 @@ N.B. : merci de me contacter directement en cas de problème avec les instructio
 
 **INSTALLATION SOUS WINDOWS 7** ou plus récent :
 
-* télécharger l'archive miniDart_0.7.0_test.exe
+* télécharger l'archive ici : https://framagit.org/ericb/miniDart/tree/master/testing_version
 * placer cette archive dans un endroit facile d'accès, par exemple sur le bureau ;
 * double-cliquer dessus pour lancer l'installeur ;
 * suivre les instructions.
@@ -57,7 +61,7 @@ ENREGISTREMENT : 1280 x 720 à 30 images par secondes est le SEUL FORMAT QUI DEV
 
 => Je n'ai pas assez de retour pour en conseiller d'autres pour l'instant.
 
-Le numéro des joueurs ne FONCTIONNE PAS CORRECTEMENT (le même numéro est attribué à tous les joueurs). Cela sera corrigé dans la version 0.7.1 à venir.
+Le numéro des joueurs ne FONCTIONNE PAS CORRECTEMENT (le même numéro est attribué à tous les joueurs). Cela sera corrigé dans une version prochaine.
 
 
 Enfin, merci d'avance pour tout retour et n'oubliez pas de tester l'intégrité de l'archive téléchargée 
@@ -70,9 +74,6 @@ Eric Bachard
 ************************************************************************************************************
                    Somme de contrôle (sha 256)                                   Version
 
-************************************************************************************************************
-
-     725a1b15794209a9516ecb8040a8b3d37018e7d26da52623397f6f67c3ca6263  miniDart_0.7.0_test.exe
 
 ************************************************************************************************************
 
