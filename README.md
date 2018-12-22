@@ -4,7 +4,7 @@
 
 **Version NON maintenue. Le développement continue sur :  https://framagit.org/ericb/miniDart**
 
-# miniDart (version actuelle : 0.8.9a (devel 0.9.0) )
+# miniDart (version actuelle : 0.9.0 (devel 0.9.1) )
 Logiciel d'analyse vidéo pour coachs de sports collectifs (handball, mais pas seulement)
 
 Ceci est une version de démonstration du logiciel **miniDart**. Elle n'est pas complète, et comporte probablement quelques bugs. Une partie des fonctionnalités est encore manquante, et devrait être implémentée d'ici le printemps 2018.
@@ -56,13 +56,21 @@ Système d'exploitation : testé sur Windows 7 et Win 10  64 bits (une version d
 - [x] ouvrir un fichier de type vidéo (sera utilisé pour le mode image par image et l'analyse+séquençage avec ajout de tags)
 - [x] mode image par image (déjà disponible ici : https://github.com/ebachard/cv_slideshow fonctionne en mode "drag and drop") ;
 - [x] selon l'installation, il est possible de régler directement les paramètres de la webcam, comme la luminance, etc  (onglet "paramètres")
-
+- [x] spot mode : encerclez une zone importante dans ce qui est actuellement affiché (enregistrement à venir)
+- [x]  Nouvelle entrée de menu, permettant de séctionner la source des images.
 
 **Atelier analyse** :
 - [x] ouverture d'un répertoire contenant une vidéo
 - [x] choix du répertoire d'enregistrement par défaut des vidéos (à tester de façon plus approfondie)
 - [x] analyse image par image : on ouver une vidéo de courte durée (30 s max conseillé) et on peut piloter le défilement
 - [x] modification de la taille de l'image en mode slideshow
+- [x] ralenti possible, et ajustable en images par seconde. Fonctionne de 5 images par seconde (vrai ralenti)  à ~40 images par seconde (accéléré). Le réglage à 60 images/s n'est pas précis du tout.
+- [ ] extraction et annotation d'une image (à venir, puis enregistrement sur une durée donnée (format .avi, pas de son)
+
+Atelier Suivi de l'équipe :
+
+-[x] Suivi par actions : But, Attaque placée, etc
+-[x] Mesure performance de l'équipe : + - en fonction des actions pour chaque jouer, et affichés de façon globale pour 'léquipe'
 
 À venir : annotations + enregistrement de l'image sous forme d'une vidéo de durée donnée.
 
@@ -118,7 +126,7 @@ Ce logiciel est écrit sous Linux, et cross-compilé pour fonctionner sous Windo
 
 **ENGLISH VERSION**
 
-#miniDart (current version: 0.8.9a on https://framagit.org/ericb/miniDart )
+#miniDart (current version: 0.9.0 on https://framagit.org/ericb/miniDart )
 Video analysis software for team sports coaches (handball, but not only)
 
 This is a demo version of the **miniDart** software. It is not complete, and probably has some bugs. Some of the features are still missing, and should be implemented by spring 2018.
@@ -174,6 +182,7 @@ Workshop analysis :
 - [x]    open a directory containing a video
 - [x]    choice of default video recording directory (to be tested further)
 - [x]    image-by-image analysis: we open a video of short duration (30s maximum recommended) and we can control the scrolling 
+- [x]    tweakable slow motion. Works from 5 fps (true slow motion) to  ~40 fps (accelerated). 60 fps is very approximative on Linux.
 
 Upcoming: annotations + recording of the image as a video of a given duration.
 
