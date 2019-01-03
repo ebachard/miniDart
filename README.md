@@ -121,7 +121,7 @@ Ce logiciel est écrit sous Linux, et cross-compilé pour fonctionner sous Windo
 * (prochainement) **TinyXML2** (https://github.com/leethomason/tinyxml2) pour les tags xml lors de l'analyse et le classement d'une vidéo.
 * (en test) **SDL_kitchensink** (https://github.com/katajakasa/SDL_kitchensink) pour le son dans les vidéos (lecture ET enregistrement)
 
-**Auteur du logiciel miniDart : Eric Bachard © 2016-2018**
+**Auteur du logiciel miniDart : Eric Bachard © 2016-2019**
 
 
 **ENGLISH VERSION**
@@ -237,4 +237,4 @@ This software is written on Linux, and cross-compiled to run on 64-bit Windows. 
 * **(coming soon) **TinyXML2** ( https://github.com/leethomason/tinyxml2 ) for xml tags when analyzing and ranking a video.
 * **(in test) **SDL_kitchensink** ( https://github.com/katajakasa/SDL_kitchensink ) for sound in videos (reading AND recording) 
 
-Author of miniDart software: Eric Bachard © 2016-2018 
+Author of miniDart software: Eric Bachard © 2016-2019 
