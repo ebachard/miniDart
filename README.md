@@ -4,7 +4,7 @@
 
 **Version NON maintenue. Le développement continue sur :  https://framagit.org/ericb/miniDart**
 
-# miniDart (version actuelle : 0.9.2 (Windows7+ et binaire pour LinuxMint) , devel : 0.9.3 Windows et Linux, avec multi-viewports inclus -> voir Changelog pour plus d'informations)
+# miniDart (version actuelle : 0.9.3 (Windows7+ et binaire pour LinuxMint) , devel : 0.9.3 Windows et Linux, avec multi-viewports inclus -> voir Changelog pour plus d'informations)
 Logiciel d'analyse vidéo pour coachs de sports collectifs (handball, ou autre sport)
 
 Ceci est une version de démonstration du logiciel **miniDart**. Elle n'est pas complète, et comporte probablement quelques bugs. Une partie des fonctionnalités est encore manquante, et devrait être implémentée d'ici le printemps 2018.
@@ -126,7 +126,7 @@ Ce logiciel est écrit sous Linux, et cross-compilé pour fonctionner sous Windo
 
 **ENGLISH VERSION**
 
-#miniDart (current version: 0.9.2 (Windows7+ et binaire for LinuxMint) , devel : 0.9.3 Windows and Linux, including multi-viewports  -> see the Changelog pour further information at https://framagit.org/ericb/miniDart  (devel 0.9.3) )
+#miniDart (current version: 0.9.3 (Windows7+ et binaire for LinuxMint) , devel : 0.9.4 Windows and Linux, including multi-viewports  -> see the Changelog pour further information at https://framagit.org/ericb/miniDart  (devel 0.9.3) )
 Video analysis software for team sports coaches (handball, other collective sport)
 
 This is a demo version of the **miniDart** software. It is not complete, and probably has some bugs. Some of the features are still missing, and should be implemented by spring 2018.
