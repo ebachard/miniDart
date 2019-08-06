@@ -4,12 +4,12 @@
 
 **Version NON maintenue. Le développement continue sur :  https://framagit.org/ericb/miniDart**
 
-**Pour le téléchargement, cliquer ici : https://framagit.org/ericb/miniDart/blob/master/testing_version/miniDart_0.9.4_test.exe**
+**Pour le téléchargement, cliquer ici : https://framagit.org/ericb/miniDart/blob/master/testing_version/miniDart_0.9.5_test.exe**
 
-# miniDart (0.9.4 pour Windows7+ ou binaire 0.9.3 pour LinuxMint 
+# miniDart (0.9.5 pour Windows7+ ou binaire 0.9.3 pour LinuxMint 
 **Instructions et informations : https://framagit.org/ericb/miniDart/wikis/home**
 
-#devel : 0.9.4 Windows et Linux, avec multi-viewports inclus -> voir Changelog pour plus d'informations)
+#devel : 0.9.5 Windows et Linux, avec multi-viewports inclus -> voir Changelog pour plus d'informations)
 
 Logiciel d'analyse vidéo pour coachs de sports collectifs (handball, ou autre sport)
 
@@ -19,9 +19,9 @@ Ceci est une version de démonstration du logiciel **miniDart**. Elle n'est pas 
 
 **Un projet de développement handball, est en cours. Le logiciel miniDart sera une des ressources utilisées pour son financement. Le but est de financer un tournoi international de handball pour une équipe féminine jeunes (-13)**
 
-**Ainsi, le logiciel miniDart, lorsqu'il sera complet, sera dans un premier temps vendu (dans les ~50 euros / club). Quand suffisamment d'argent aura été récupéré, les sources du logiciel seront mises sous licence LGPL.**
+**Ainsi, le logiciel miniDart, lorsqu'il sera complet, sera dans un premier temps vendu (dans les ~50 euros / club). Les sources du logiciel seront mises sous licence GPL (version Linux seulement).**
 
-Deux versions sont disponibles au téléchargement. **L'une pour Windows 7 (64 bits)** ou plus récent, l'autre pour **Linux Intel (64 bits)**. Pour la version Linux, des instructions sont données dans le répertoire contenant les archives.
+Deux versions sont disponibles au téléchargement. **L'une pour Windows 7 (64 bits)** ou plus récent, l'autre pour **Linux Intel (64 bits)**. Pour la version Linux, des instructions de compilation sont données dans le répertoire contenant les archives.
 
 La version en téléchargement a besoin de Windows 7 ou plus + pour fonctionner, et vous est fournie avec un installeur. La désinstallation a aussi été testée, et supprime toute trace du logiciel. **Si vous l'installez**, notez que vous utilisez ce logiciel à vos risques et périls, et n'oubliez pas qu'il est impératif de faire des sauvegardes de vos document AVANT de l'utiliser.
 
@@ -46,7 +46,7 @@ Ce logiciel est écrit sous Linux, et cross-compilé pour fonctionner sous Windo
 
 **ENGLISH VERSION**
 
-#miniDart (current version: 0.9.3 (Windows7+ et binaire for LinuxMint) , devel : 0.9.4 Windows and Linux, including multi-viewports  -> see the Changelog pour further information at https://framagit.org/ericb/miniDart  (devel 0.9.3) )
+#miniDart (current version: 0.9.5 (Windows7+ et binaire for LinuxMint) , devel : 0.9.5 Windows and Linux, including multi-viewports  -> see the Changelog pour further information at https://framagit.org/ericb/miniDart  (devel 0.9.3) )
 Video analysis software for team sports coaches (handball, other collective sport)
 
 This is a demo version of the **miniDart** software. It is not complete, and probably has some bugs. Some of the features are still missing, and should be implemented by spring 2018.
@@ -61,7 +61,7 @@ Two versions are available for download. One for **Windows 7 (64 bits) or later*
 
 The download version needs Windows 7 or more + to work, and comes with an installer. The uninstallation has also been tested, and removes all traces of the software. If you install it , note that you use this software at your own risk, and remember that it is imperative to make backups of your documents BEFORE using it.
 
-**For download, click here: https://framagit.org/ericb/miniDart/blob/master/testing_version/miniDart_0.9.4_test.exe**
+**For download, click here: https://framagit.org/ericb/miniDart/blob/master/testing_version/miniDart_0.9.5_test.exe**
 
 Prerequisites
 
