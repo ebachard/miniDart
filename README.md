@@ -19,7 +19,7 @@ Ceci est une version de démonstration du logiciel **miniDart**. Elle n'est pas 
 
 **Un projet de développement handball, est en cours. Le logiciel miniDart sera une des ressources utilisées pour son financement. Le but est de financer un tournoi international de handball pour une équipe féminine jeunes (-13)**
 
-**Ainsi, le logiciel miniDart, lorsqu'il sera complet, sera dans un premier temps vendu (dans les ~50 euros / club). Les sources du logiciel seront mises sous licence GPL (version Linux seulement).**
+**Ainsi, le logiciel miniDart, lorsqu'il sera complet, sera dans un premier temps vendu (dans les ~50 euros / club). Les sources du logiciel sont disponibles sous licence GPL (version Linux seulement).**
 
 Deux versions sont disponibles au téléchargement. **L'une pour Windows 7 (64 bits)** ou plus récent, l'autre pour **Linux Intel (64 bits)**. Pour la version Linux, des instructions de compilation sont données dans le répertoire contenant les archives.
 
@@ -55,7 +55,7 @@ This is a demo version of the **miniDart** software. It is not complete, and pro
 
 **A handball development project is underway. The miniDart software will be one of the resources used for its financing. The goal is to fund an international handball tournament for a young women's team (-13)**
 
-**Thus, the software miniDart, when complete, will be sold first. When enough money has been recovered, the sources of the software will be licensed under the LGPL.**
+**Thus, the software miniDart, when complete, will be sold first. When enough money has been recovered, the sources of the software are available under the GPL v2 license.**
 
 Two versions are available for download. One for **Windows 7 (64 bits) or later**, the other for **Linux Intel (64 bits)** . For the Linux version, instructions are given in the directory containing the archives.
 
