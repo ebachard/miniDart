@@ -2,7 +2,9 @@
 
 """"""""""""""""""""""""""""""""""""""""""""""
 
-**ENGLISH US VERSION : Most recent version is : https://framagit.org/ericb/miniDart/blob/master/testing_version/en-US/miniDart_0.9.6_en-US_test.exe
+**LATEST ENGLISH US VERSION** : [**Click here to download the most recent en-US version**](https://framagit.org/ericb/miniDart/-/blob/master/testing_version/en-US/miniDart_0.9.7_en-US_test.exe)
+
+**FRENCH VERSION** : [**Click here to download the most recent french version**](https://framagit.org/ericb/miniDart/-/blob/master/testing_version/miniDart_0.9.7_test.exe)
 
 **Discontinued website. The devel continues here:  https://framagit.org/ericb/miniDart**
 
