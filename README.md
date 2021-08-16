@@ -1,4 +1,9 @@
-![miniDart 0.9.4 WIP](screenshots/miniDart_0.9_dev_Dark_theme_2018_04_26_2_mini.png)
+**Projet et logiciel créés le 1er aout 2016** 
+
+**Site non maintenu. Le développement continue sur framagit :  https://framagit.org/ericb/miniDart**
+
+**Discontinued website. The devel continues here:  https://framagit.org/ericb/miniDart**
+
 
 """"""""""""""""""""""""""""""""""""""""""""""
 
@@ -6,7 +11,9 @@
 
 **FRENCH VERSION** : [**Click here to download the most recent french version**](https://framagit.org/ericb/miniDart/-/blob/master/testing_version/miniDart_0.9.7_test.exe)
 
-**Discontinued website. The devel continues here:  https://framagit.org/ericb/miniDart**
+![miniDart 0.9.4 WIP](screenshots/miniDart_0.9_dev_Dark_theme_2018_04_26_2_mini.png)
+
+
 
 Prerequisites
 
