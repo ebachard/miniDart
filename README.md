@@ -1,6 +1,8 @@
 **Projet et logiciel créés le 1er aout 2016** 
 
+
 **Site non maintenu. Le développement continue sur framagit :  https://framagit.org/ericb/miniDart**
+
 
 **Discontinued website. The devel continues here:  https://framagit.org/ericb/miniDart**
 
